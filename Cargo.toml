@@ -1,0 +1,11 @@
+[package]
+name = "currencylib"
+version = "0.0.0"
+edition = "2024"
+authors = ["Muhammad Fathir Irhas <fathir.irhas@gmail.com>"]
+description = "A library containing types and metadata for currencies."
+license = "MIT"
+repository = "https://github.com/mfirhas/currencylib"
+
+
+[dependencies]
