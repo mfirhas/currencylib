@@ -1,13 +1,13 @@
 [package]
 name = "currencylib"
-version = "0.0.0"
+version = "0.1.0"
 edition = "2024"
 authors = ["Muhammad Fathir Irhas <fathir.irhas@gmail.com>"]
 description = "A library containing types and metadata for currencies."
 license = "MIT"
 repository = "https://github.com/mfirhas/currencylib"
 documentation = "https://docs.rs/currencylib"
-keywords = ["finance", "currency", "money", "decimal", "type-safe", "no-std"]
+keywords = ["finance", "currency", "money", "type-safe", "no-std"]
 categories = ["finance", "data-structures"]
 
 [dependencies]
