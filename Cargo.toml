@@ -11,4 +11,4 @@ repository = "https://github.com/mfirhas/currencylib"
 [dependencies]
 
 [build-dependencies]
-iso_currency = { version = "0.4", features = ["iterator"] }
+iso_currency = { version = "0.5.3", features = ["iterator"] }
