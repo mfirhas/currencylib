@@ -14,8 +14,11 @@ fn main() {
 /// Generate `Currency` implementations for all ISO 4217 currencies
 fn generate_iso() -> Result<(), String> {
     let out_dir = env::var("OUT_DIR").unwrap();
-    let dest_path = Path::new(&out_dir).join("currencies.rs");
+    let filename = "iso_currencies.rs";
+    let dest_path = Path::new(&out_dir).join(filename);
     let mut f = File::create(&dest_path).unwrap();
+
+    writeln!(f, "use crate::Currency;").map_err(|err| err.to_string())?;
 
     // Generate for ALL ISO currencies
     for currency in iso_currency::Currency::iter() {
