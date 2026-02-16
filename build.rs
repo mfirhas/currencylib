@@ -8,7 +8,7 @@ use std::sync::LazyLock;
 const DEFAULT_MINOR_UNIT_SYMBOL: &str = "minor";
 
 fn main() {
-    generate_iso().expect("failed generating currencies");
+    generate_iso().expect("failed generating iso currencies");
 }
 
 /// Generate `Currency` implementations for all ISO 4217 currencies
