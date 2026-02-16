@@ -28,6 +28,7 @@ fn generate_iso() -> Result<(), String> {
         writeln!(
             f,
             "
+/// {}
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub struct {};
 
@@ -42,6 +43,7 @@ impl Currency for {} {{
     const DECIMAL_SEPARATOR: &'static str = \"{}\";
 }}
 ",
+            isocurrency.name.clone(),
             isocurrency.code,
             isocurrency.code,
             isocurrency.code,
@@ -61,6 +63,7 @@ impl Currency for {} {{
     Ok(())
 }
 
+/// List of countries whose currency's thousands separated by comma(",")
 const COMMA_SEPARATED_THOUSAND_CURRENCIES: &[&str] = &[
     // North America
     "USD", // United States Dollar
@@ -111,6 +114,7 @@ const COMMA_SEPARATED_THOUSAND_CURRENCIES: &[&str] = &[
     "ILS",
 ];
 
+/// Facade for iso currencies
 struct IsoCurrency {
     pub code: String,
     pub symbol: String,
@@ -122,6 +126,7 @@ struct IsoCurrency {
 }
 
 impl IsoCurrency {
+    /// Override iso currency properties
     pub(crate) fn r#override<F>(&mut self, func: F)
     where
         F: FnOnce(&mut Self),
@@ -189,4 +194,6 @@ impl From<String> for Separator {
     }
 }
 
+/// List of iso currencies override functions.
+/// Each overrides should have comment on why it overrides.
 static OVERRIDES: LazyLock<Vec<fn(&mut IsoCurrency)>> = LazyLock::new(|| vec![]);

@@ -13,19 +13,19 @@ pub trait Currency {
     /// Full currency name (e.g., "US Dollar", "Euro")
     const NAME: &'static str;
 
-    /// numerical code
+    /// Currency numerical identification
     const NUMERIC: u16;
 
-    /// Number of decimal places (minor units)
+    /// Number of decimal places/minor units (e.g., USD -> cents -> minor unit = 2)
     const MINOR_UNIT: u16;
 
-    /// Symbol of currency's minor unit
+    /// Currency minor symbol (e.g., USD -> "¢")
     const MINOR_UNIT_SYMBOL: &'static str;
 
-    /// thousand separator
+    /// thousand separator (e.g., USD -> ",")
     const THOUSAND_SEPARATOR: &'static str;
 
-    /// decimal separator
+    /// decimal separator (e.g., USD -> ".")
     const DECIMAL_SEPARATOR: &'static str;
 }
 
