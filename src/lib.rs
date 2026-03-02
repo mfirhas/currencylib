@@ -1,6 +1,7 @@
 #![doc = include_str!("../README.md")]
 #![no_std]
 #![forbid(unsafe_code)]
+#![forbid(clippy::unwrap_used)]
 
 /// The Currency properties
 pub trait Currency {

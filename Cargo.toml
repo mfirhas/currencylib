@@ -14,3 +14,4 @@ categories = ["finance", "data-structures"]
 
 [build-dependencies]
 iso_currency = { version = "0.5.3", features = ["iterator"] }
+phf = { version = "0.13", features = ["macros"] }

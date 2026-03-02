@@ -1,11 +1,18 @@
+#![forbid(clippy::unwrap_used)]
+
 use iso_currency::IntoEnumIterator;
+use phf::phf_set;
 use std::env;
 use std::fs::File;
 use std::io::Write;
 use std::path::Path;
 use std::sync::LazyLock;
 
+/// If a currency has no symbol gives it default.
 const DEFAULT_MINOR_UNIT_SYMBOL: &str = "minor";
+
+/// Where build.rs will put build result.
+const OUT_FILENAME: &str = "iso_currencies.rs";
 
 fn main() {
     generate_iso().expect("failed generating iso currencies");
@@ -13,10 +20,9 @@ fn main() {
 
 /// Generate `Currency` implementations for all ISO 4217 currencies
 fn generate_iso() -> Result<(), String> {
-    let out_dir = env::var("OUT_DIR").unwrap();
-    let filename = "iso_currencies.rs";
-    let dest_path = Path::new(&out_dir).join(filename);
-    let mut f = File::create(&dest_path).unwrap();
+    let out_dir = env::var("OUT_DIR").map_err(|err| err.to_string())?;
+    let dest_path = Path::new(&out_dir).join(OUT_FILENAME);
+    let mut f = File::create(&dest_path).map_err(|err| err.to_string())?;
 
     writeln!(f, "use crate::Currency;").map_err(|err| err.to_string())?;
 
@@ -64,55 +70,55 @@ impl Currency for {} {{
 }
 
 /// List of countries whose currency's thousands separated by comma(",")
-const COMMA_SEPARATED_THOUSAND_CURRENCIES: &[&str] = &[
-    // North America
-    "USD", // United States Dollar
-    "CAD", // Canadian Dollar
-    "MXN", // Mexican Peso
-    // Central America & Caribbean
-    "GTQ", // Guatemalan Quetzal
-    "HNL", // Honduran Lempira
-    "NIO", // Nicaraguan Córdoba
-    "CRC", // Costa Rican Colón
-    "PAB", // Panamanian Balboa
-    "DOP", // Dominican Peso
-    // Asia
-    "CNY", // Chinese Yuan
-    "JPY", // Japanese Yen
-    "KRW", // South Korean Won
-    "TWD", // Taiwan Dollar
-    "THB", // Thai Baht
-    "MYR", // Malaysian Ringgit
-    "SGD", // Singapore Dollar
-    "PHP", // Philippine Peso
-    "INR", // Indian Rupee
-    "PKR", // Pakistani Rupee
-    "BDT", // Bangladeshi Taka
-    "HKD", // Hong Kong Dollar
-    "LKR", // Sri Lankan Rupee
-    "NPR", // Nepalese Rupee
-    // Africa
-    "ZAR", // South African Rand
-    "BWP", // Botswana Pula
-    "ZMW", // Zambian Kwacha
-    "KES", // Kenyan Shilling
-    "TZS", // Tanzanian Shilling
-    "UGX", // Ugandan Shilling
-    "GHS", // Ghanaian Cedi
-    "NGN", // Nigerian Naira
-    // Oceania
-    "AUD", // Australian Dollar
-    "NZD", // New Zealand Dollar
-    // Europe (isolated)
-    "GBP", // British Pound
-    "CHF", // Swiss Franc
-    "ISK", // Icelandic Króna
-    // Middle East
-    "SAR", // Saudi Riyal
-    "AED", // UAE Dirham
-    //
-    "ILS",
-];
+static COMMA_SEPARATED_THOUSAND_CURRENCIES: phf::Set<&'static str> = phf_set! {
+        // North America
+        "USD", // United States Dollar
+        "CAD", // Canadian Dollar
+        "MXN", // Mexican Peso
+        // Central America & Caribbean
+        "GTQ", // Guatemalan Quetzal
+        "HNL", // Honduran Lempira
+        "NIO", // Nicaraguan Córdoba
+        "CRC", // Costa Rican Colón
+        "PAB", // Panamanian Balboa
+        "DOP", // Dominican Peso
+        // Asia
+        "CNY", // Chinese Yuan
+        "JPY", // Japanese Yen
+        "KRW", // South Korean Won
+        "TWD", // Taiwan Dollar
+        "THB", // Thai Baht
+        "MYR", // Malaysian Ringgit
+        "SGD", // Singapore Dollar
+        "PHP", // Philippine Peso
+        "INR", // Indian Rupee
+        "PKR", // Pakistani Rupee
+        "BDT", // Bangladeshi Taka
+        "HKD", // Hong Kong Dollar
+        "LKR", // Sri Lankan Rupee
+        "NPR", // Nepalese Rupee
+        // Africa
+        "ZAR", // South African Rand
+        "BWP", // Botswana Pula
+        "ZMW", // Zambian Kwacha
+        "KES", // Kenyan Shilling
+        "TZS", // Tanzanian Shilling
+        "UGX", // Ugandan Shilling
+        "GHS", // Ghanaian Cedi
+        "NGN", // Nigerian Naira
+        // Oceania
+        "AUD", // Australian Dollar
+        "NZD", // New Zealand Dollar
+        // Europe (isolated)
+        "GBP", // British Pound
+        "CHF", // Swiss Franc
+        "ISK", // Icelandic Króna
+        // Middle East
+        "SAR", // Saudi Riyal
+        "AED", // UAE Dirham
+        //
+        "ILS"
+};
 
 /// Facade for iso currencies
 struct IsoCurrency {
@@ -179,7 +185,7 @@ struct Separator {
 impl From<String> for Separator {
     fn from(value: String) -> Self {
         if let Some(c) = iso_currency::Currency::from_code(&value)
-            && COMMA_SEPARATED_THOUSAND_CURRENCIES.contains(&c.code())
+            && COMMA_SEPARATED_THOUSAND_CURRENCIES.contains(c.code())
         {
             Separator {
                 thousand_separator: ",".into(),
