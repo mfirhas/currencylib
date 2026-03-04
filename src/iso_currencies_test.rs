@@ -31,8 +31,8 @@ fn test_afn_currency() {
     assert_eq!(AFN::NUMERIC, 971);
     assert_eq!(AFN::MINOR_UNIT, 2);
     assert_eq!(AFN::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(AFN::THOUSAND_SEPARATOR, ".");
-    assert_eq!(AFN::DECIMAL_SEPARATOR, ",");
+    assert_eq!(AFN::THOUSAND_SEPARATOR, "٬");
+    assert_eq!(AFN::DECIMAL_SEPARATOR, "٫");
 }
 
 #[test]
@@ -43,7 +43,7 @@ fn test_all_currency() {
     assert_eq!(ALL::NUMERIC, 8);
     assert_eq!(ALL::MINOR_UNIT, 2);
     assert_eq!(ALL::MINOR_UNIT_SYMBOL, "q");
-    assert_eq!(ALL::THOUSAND_SEPARATOR, ".");
+    assert_eq!(ALL::THOUSAND_SEPARATOR, " ");
     assert_eq!(ALL::DECIMAL_SEPARATOR, ",");
 }
 
@@ -55,7 +55,7 @@ fn test_amd_currency() {
     assert_eq!(AMD::NUMERIC, 51);
     assert_eq!(AMD::MINOR_UNIT, 2);
     assert_eq!(AMD::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(AMD::THOUSAND_SEPARATOR, ".");
+    assert_eq!(AMD::THOUSAND_SEPARATOR, " ");
     assert_eq!(AMD::DECIMAL_SEPARATOR, ",");
 }
 
@@ -67,7 +67,7 @@ fn test_aoa_currency() {
     assert_eq!(AOA::NUMERIC, 973);
     assert_eq!(AOA::MINOR_UNIT, 2);
     assert_eq!(AOA::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(AOA::THOUSAND_SEPARATOR, ".");
+    assert_eq!(AOA::THOUSAND_SEPARATOR, " ");
     assert_eq!(AOA::DECIMAL_SEPARATOR, ",");
 }
 
@@ -139,8 +139,8 @@ fn test_bbd_currency() {
     assert_eq!(BBD::NUMERIC, 52);
     assert_eq!(BBD::MINOR_UNIT, 2);
     assert_eq!(BBD::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(BBD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(BBD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(BBD::THOUSAND_SEPARATOR, ",");
+    assert_eq!(BBD::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -163,7 +163,7 @@ fn test_bgn_currency() {
     assert_eq!(BGN::NUMERIC, 975);
     assert_eq!(BGN::MINOR_UNIT, 2);
     assert_eq!(BGN::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(BGN::THOUSAND_SEPARATOR, ".");
+    assert_eq!(BGN::THOUSAND_SEPARATOR, " ");
     assert_eq!(BGN::DECIMAL_SEPARATOR, ",");
 }
 
@@ -175,8 +175,8 @@ fn test_bhd_currency() {
     assert_eq!(BHD::NUMERIC, 48);
     assert_eq!(BHD::MINOR_UNIT, 3);
     assert_eq!(BHD::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(BHD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(BHD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(BHD::THOUSAND_SEPARATOR, "٬");
+    assert_eq!(BHD::DECIMAL_SEPARATOR, "٫");
 }
 
 #[test]
@@ -187,7 +187,7 @@ fn test_bif_currency() {
     assert_eq!(BIF::NUMERIC, 108);
     assert_eq!(BIF::MINOR_UNIT, 0);
     assert_eq!(BIF::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(BIF::THOUSAND_SEPARATOR, ".");
+    assert_eq!(BIF::THOUSAND_SEPARATOR, " ");
     assert_eq!(BIF::DECIMAL_SEPARATOR, ",");
 }
 
@@ -199,8 +199,8 @@ fn test_bmd_currency() {
     assert_eq!(BMD::NUMERIC, 60);
     assert_eq!(BMD::MINOR_UNIT, 2);
     assert_eq!(BMD::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(BMD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(BMD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(BMD::THOUSAND_SEPARATOR, ",");
+    assert_eq!(BMD::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -259,8 +259,8 @@ fn test_bsd_currency() {
     assert_eq!(BSD::NUMERIC, 44);
     assert_eq!(BSD::MINOR_UNIT, 2);
     assert_eq!(BSD::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(BSD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(BSD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(BSD::THOUSAND_SEPARATOR, ",");
+    assert_eq!(BSD::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -271,8 +271,8 @@ fn test_btn_currency() {
     assert_eq!(BTN::NUMERIC, 64);
     assert_eq!(BTN::MINOR_UNIT, 2);
     assert_eq!(BTN::MINOR_UNIT_SYMBOL, "Ch.");
-    assert_eq!(BTN::THOUSAND_SEPARATOR, ".");
-    assert_eq!(BTN::DECIMAL_SEPARATOR, ",");
+    assert_eq!(BTN::THOUSAND_SEPARATOR, ",");
+    assert_eq!(BTN::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -295,7 +295,7 @@ fn test_byn_currency() {
     assert_eq!(BYN::NUMERIC, 933);
     assert_eq!(BYN::MINOR_UNIT, 2);
     assert_eq!(BYN::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(BYN::THOUSAND_SEPARATOR, ".");
+    assert_eq!(BYN::THOUSAND_SEPARATOR, " ");
     assert_eq!(BYN::DECIMAL_SEPARATOR, ",");
 }
 
@@ -307,8 +307,8 @@ fn test_bzd_currency() {
     assert_eq!(BZD::NUMERIC, 84);
     assert_eq!(BZD::MINOR_UNIT, 2);
     assert_eq!(BZD::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(BZD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(BZD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(BZD::THOUSAND_SEPARATOR, ",");
+    assert_eq!(BZD::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -331,7 +331,7 @@ fn test_cdf_currency() {
     assert_eq!(CDF::NUMERIC, 976);
     assert_eq!(CDF::MINOR_UNIT, 2);
     assert_eq!(CDF::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(CDF::THOUSAND_SEPARATOR, ".");
+    assert_eq!(CDF::THOUSAND_SEPARATOR, " ");
     assert_eq!(CDF::DECIMAL_SEPARATOR, ",");
 }
 
@@ -343,8 +343,8 @@ fn test_che_currency() {
     assert_eq!(CHE::NUMERIC, 947);
     assert_eq!(CHE::MINOR_UNIT, 2);
     assert_eq!(CHE::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(CHE::THOUSAND_SEPARATOR, ".");
-    assert_eq!(CHE::DECIMAL_SEPARATOR, ",");
+    assert_eq!(CHE::THOUSAND_SEPARATOR, "'");
+    assert_eq!(CHE::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -355,7 +355,7 @@ fn test_chf_currency() {
     assert_eq!(CHF::NUMERIC, 756);
     assert_eq!(CHF::MINOR_UNIT, 2);
     assert_eq!(CHF::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(CHF::THOUSAND_SEPARATOR, ",");
+    assert_eq!(CHF::THOUSAND_SEPARATOR, "'");
     assert_eq!(CHF::DECIMAL_SEPARATOR, ".");
 }
 
@@ -367,8 +367,8 @@ fn test_chw_currency() {
     assert_eq!(CHW::NUMERIC, 948);
     assert_eq!(CHW::MINOR_UNIT, 2);
     assert_eq!(CHW::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(CHW::THOUSAND_SEPARATOR, ".");
-    assert_eq!(CHW::DECIMAL_SEPARATOR, ",");
+    assert_eq!(CHW::THOUSAND_SEPARATOR, "'");
+    assert_eq!(CHW::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -439,8 +439,8 @@ fn test_crc_currency() {
     assert_eq!(CRC::NUMERIC, 188);
     assert_eq!(CRC::MINOR_UNIT, 2);
     assert_eq!(CRC::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(CRC::THOUSAND_SEPARATOR, ",");
-    assert_eq!(CRC::DECIMAL_SEPARATOR, ".");
+    assert_eq!(CRC::THOUSAND_SEPARATOR, " ");
+    assert_eq!(CRC::DECIMAL_SEPARATOR, ",");
 }
 
 #[test]
@@ -451,8 +451,8 @@ fn test_cuc_currency() {
     assert_eq!(CUC::NUMERIC, 931);
     assert_eq!(CUC::MINOR_UNIT, 2);
     assert_eq!(CUC::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(CUC::THOUSAND_SEPARATOR, ".");
-    assert_eq!(CUC::DECIMAL_SEPARATOR, ",");
+    assert_eq!(CUC::THOUSAND_SEPARATOR, ",");
+    assert_eq!(CUC::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -463,8 +463,8 @@ fn test_cup_currency() {
     assert_eq!(CUP::NUMERIC, 192);
     assert_eq!(CUP::MINOR_UNIT, 2);
     assert_eq!(CUP::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(CUP::THOUSAND_SEPARATOR, ".");
-    assert_eq!(CUP::DECIMAL_SEPARATOR, ",");
+    assert_eq!(CUP::THOUSAND_SEPARATOR, ",");
+    assert_eq!(CUP::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -475,7 +475,7 @@ fn test_cve_currency() {
     assert_eq!(CVE::NUMERIC, 132);
     assert_eq!(CVE::MINOR_UNIT, 2);
     assert_eq!(CVE::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(CVE::THOUSAND_SEPARATOR, ".");
+    assert_eq!(CVE::THOUSAND_SEPARATOR, " ");
     assert_eq!(CVE::DECIMAL_SEPARATOR, ",");
 }
 
@@ -487,7 +487,7 @@ fn test_czk_currency() {
     assert_eq!(CZK::NUMERIC, 203);
     assert_eq!(CZK::MINOR_UNIT, 2);
     assert_eq!(CZK::MINOR_UNIT_SYMBOL, "h");
-    assert_eq!(CZK::THOUSAND_SEPARATOR, ".");
+    assert_eq!(CZK::THOUSAND_SEPARATOR, " ");
     assert_eq!(CZK::DECIMAL_SEPARATOR, ",");
 }
 
@@ -499,7 +499,7 @@ fn test_djf_currency() {
     assert_eq!(DJF::NUMERIC, 262);
     assert_eq!(DJF::MINOR_UNIT, 0);
     assert_eq!(DJF::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(DJF::THOUSAND_SEPARATOR, ".");
+    assert_eq!(DJF::THOUSAND_SEPARATOR, " ");
     assert_eq!(DJF::DECIMAL_SEPARATOR, ",");
 }
 
@@ -547,8 +547,8 @@ fn test_egp_currency() {
     assert_eq!(EGP::NUMERIC, 818);
     assert_eq!(EGP::MINOR_UNIT, 2);
     assert_eq!(EGP::MINOR_UNIT_SYMBOL, "pt");
-    assert_eq!(EGP::THOUSAND_SEPARATOR, ".");
-    assert_eq!(EGP::DECIMAL_SEPARATOR, ",");
+    assert_eq!(EGP::THOUSAND_SEPARATOR, "٬");
+    assert_eq!(EGP::DECIMAL_SEPARATOR, "٫");
 }
 
 #[test]
@@ -559,8 +559,8 @@ fn test_ern_currency() {
     assert_eq!(ERN::NUMERIC, 232);
     assert_eq!(ERN::MINOR_UNIT, 2);
     assert_eq!(ERN::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(ERN::THOUSAND_SEPARATOR, ".");
-    assert_eq!(ERN::DECIMAL_SEPARATOR, ",");
+    assert_eq!(ERN::THOUSAND_SEPARATOR, ",");
+    assert_eq!(ERN::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -571,8 +571,8 @@ fn test_etb_currency() {
     assert_eq!(ETB::NUMERIC, 230);
     assert_eq!(ETB::MINOR_UNIT, 2);
     assert_eq!(ETB::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(ETB::THOUSAND_SEPARATOR, ".");
-    assert_eq!(ETB::DECIMAL_SEPARATOR, ",");
+    assert_eq!(ETB::THOUSAND_SEPARATOR, ",");
+    assert_eq!(ETB::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -595,8 +595,8 @@ fn test_fjd_currency() {
     assert_eq!(FJD::NUMERIC, 242);
     assert_eq!(FJD::MINOR_UNIT, 2);
     assert_eq!(FJD::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(FJD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(FJD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(FJD::THOUSAND_SEPARATOR, ",");
+    assert_eq!(FJD::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -607,8 +607,8 @@ fn test_fkp_currency() {
     assert_eq!(FKP::NUMERIC, 238);
     assert_eq!(FKP::MINOR_UNIT, 2);
     assert_eq!(FKP::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(FKP::THOUSAND_SEPARATOR, ".");
-    assert_eq!(FKP::DECIMAL_SEPARATOR, ",");
+    assert_eq!(FKP::THOUSAND_SEPARATOR, ",");
+    assert_eq!(FKP::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -631,7 +631,7 @@ fn test_gel_currency() {
     assert_eq!(GEL::NUMERIC, 981);
     assert_eq!(GEL::MINOR_UNIT, 2);
     assert_eq!(GEL::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(GEL::THOUSAND_SEPARATOR, ".");
+    assert_eq!(GEL::THOUSAND_SEPARATOR, " ");
     assert_eq!(GEL::DECIMAL_SEPARATOR, ",");
 }
 
@@ -655,8 +655,8 @@ fn test_gip_currency() {
     assert_eq!(GIP::NUMERIC, 292);
     assert_eq!(GIP::MINOR_UNIT, 2);
     assert_eq!(GIP::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(GIP::THOUSAND_SEPARATOR, ".");
-    assert_eq!(GIP::DECIMAL_SEPARATOR, ",");
+    assert_eq!(GIP::THOUSAND_SEPARATOR, ",");
+    assert_eq!(GIP::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -667,8 +667,8 @@ fn test_gmd_currency() {
     assert_eq!(GMD::NUMERIC, 270);
     assert_eq!(GMD::MINOR_UNIT, 2);
     assert_eq!(GMD::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(GMD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(GMD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(GMD::THOUSAND_SEPARATOR, ",");
+    assert_eq!(GMD::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -679,7 +679,7 @@ fn test_gnf_currency() {
     assert_eq!(GNF::NUMERIC, 324);
     assert_eq!(GNF::MINOR_UNIT, 0);
     assert_eq!(GNF::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(GNF::THOUSAND_SEPARATOR, ".");
+    assert_eq!(GNF::THOUSAND_SEPARATOR, " ");
     assert_eq!(GNF::DECIMAL_SEPARATOR, ",");
 }
 
@@ -703,8 +703,8 @@ fn test_gyd_currency() {
     assert_eq!(GYD::NUMERIC, 328);
     assert_eq!(GYD::MINOR_UNIT, 2);
     assert_eq!(GYD::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(GYD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(GYD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(GYD::THOUSAND_SEPARATOR, ",");
+    assert_eq!(GYD::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -751,7 +751,7 @@ fn test_htg_currency() {
     assert_eq!(HTG::NUMERIC, 332);
     assert_eq!(HTG::MINOR_UNIT, 2);
     assert_eq!(HTG::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(HTG::THOUSAND_SEPARATOR, ".");
+    assert_eq!(HTG::THOUSAND_SEPARATOR, " ");
     assert_eq!(HTG::DECIMAL_SEPARATOR, ",");
 }
 
@@ -763,7 +763,7 @@ fn test_huf_currency() {
     assert_eq!(HUF::NUMERIC, 348);
     assert_eq!(HUF::MINOR_UNIT, 2);
     assert_eq!(HUF::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(HUF::THOUSAND_SEPARATOR, ".");
+    assert_eq!(HUF::THOUSAND_SEPARATOR, " ");
     assert_eq!(HUF::DECIMAL_SEPARATOR, ",");
 }
 
@@ -811,8 +811,8 @@ fn test_iqd_currency() {
     assert_eq!(IQD::NUMERIC, 368);
     assert_eq!(IQD::MINOR_UNIT, 3);
     assert_eq!(IQD::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(IQD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(IQD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(IQD::THOUSAND_SEPARATOR, "٬");
+    assert_eq!(IQD::DECIMAL_SEPARATOR, "٫");
 }
 
 #[test]
@@ -823,8 +823,8 @@ fn test_irr_currency() {
     assert_eq!(IRR::NUMERIC, 364);
     assert_eq!(IRR::MINOR_UNIT, 2);
     assert_eq!(IRR::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(IRR::THOUSAND_SEPARATOR, ".");
-    assert_eq!(IRR::DECIMAL_SEPARATOR, ",");
+    assert_eq!(IRR::THOUSAND_SEPARATOR, "٬");
+    assert_eq!(IRR::DECIMAL_SEPARATOR, "٫");
 }
 
 #[test]
@@ -835,8 +835,8 @@ fn test_isk_currency() {
     assert_eq!(ISK::NUMERIC, 352);
     assert_eq!(ISK::MINOR_UNIT, 0);
     assert_eq!(ISK::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(ISK::THOUSAND_SEPARATOR, ",");
-    assert_eq!(ISK::DECIMAL_SEPARATOR, ".");
+    assert_eq!(ISK::THOUSAND_SEPARATOR, ".");
+    assert_eq!(ISK::DECIMAL_SEPARATOR, ",");
 }
 
 #[test]
@@ -847,8 +847,8 @@ fn test_jmd_currency() {
     assert_eq!(JMD::NUMERIC, 388);
     assert_eq!(JMD::MINOR_UNIT, 2);
     assert_eq!(JMD::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(JMD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(JMD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(JMD::THOUSAND_SEPARATOR, ",");
+    assert_eq!(JMD::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -859,8 +859,8 @@ fn test_jod_currency() {
     assert_eq!(JOD::NUMERIC, 400);
     assert_eq!(JOD::MINOR_UNIT, 3);
     assert_eq!(JOD::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(JOD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(JOD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(JOD::THOUSAND_SEPARATOR, "٬");
+    assert_eq!(JOD::DECIMAL_SEPARATOR, "٫");
 }
 
 #[test]
@@ -895,7 +895,7 @@ fn test_kgs_currency() {
     assert_eq!(KGS::NUMERIC, 417);
     assert_eq!(KGS::MINOR_UNIT, 2);
     assert_eq!(KGS::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(KGS::THOUSAND_SEPARATOR, ".");
+    assert_eq!(KGS::THOUSAND_SEPARATOR, " ");
     assert_eq!(KGS::DECIMAL_SEPARATOR, ",");
 }
 
@@ -907,8 +907,8 @@ fn test_khr_currency() {
     assert_eq!(KHR::NUMERIC, 116);
     assert_eq!(KHR::MINOR_UNIT, 2);
     assert_eq!(KHR::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(KHR::THOUSAND_SEPARATOR, ".");
-    assert_eq!(KHR::DECIMAL_SEPARATOR, ",");
+    assert_eq!(KHR::THOUSAND_SEPARATOR, ",");
+    assert_eq!(KHR::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -919,7 +919,7 @@ fn test_kmf_currency() {
     assert_eq!(KMF::NUMERIC, 174);
     assert_eq!(KMF::MINOR_UNIT, 0);
     assert_eq!(KMF::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(KMF::THOUSAND_SEPARATOR, ".");
+    assert_eq!(KMF::THOUSAND_SEPARATOR, " ");
     assert_eq!(KMF::DECIMAL_SEPARATOR, ",");
 }
 
@@ -931,8 +931,8 @@ fn test_kpw_currency() {
     assert_eq!(KPW::NUMERIC, 408);
     assert_eq!(KPW::MINOR_UNIT, 2);
     assert_eq!(KPW::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(KPW::THOUSAND_SEPARATOR, ".");
-    assert_eq!(KPW::DECIMAL_SEPARATOR, ",");
+    assert_eq!(KPW::THOUSAND_SEPARATOR, ",");
+    assert_eq!(KPW::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -955,8 +955,8 @@ fn test_kwd_currency() {
     assert_eq!(KWD::NUMERIC, 414);
     assert_eq!(KWD::MINOR_UNIT, 3);
     assert_eq!(KWD::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(KWD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(KWD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(KWD::THOUSAND_SEPARATOR, "٬");
+    assert_eq!(KWD::DECIMAL_SEPARATOR, "٫");
 }
 
 #[test]
@@ -967,8 +967,8 @@ fn test_kyd_currency() {
     assert_eq!(KYD::NUMERIC, 136);
     assert_eq!(KYD::MINOR_UNIT, 2);
     assert_eq!(KYD::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(KYD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(KYD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(KYD::THOUSAND_SEPARATOR, ",");
+    assert_eq!(KYD::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -979,7 +979,7 @@ fn test_kzt_currency() {
     assert_eq!(KZT::NUMERIC, 398);
     assert_eq!(KZT::MINOR_UNIT, 2);
     assert_eq!(KZT::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(KZT::THOUSAND_SEPARATOR, ".");
+    assert_eq!(KZT::THOUSAND_SEPARATOR, " ");
     assert_eq!(KZT::DECIMAL_SEPARATOR, ",");
 }
 
@@ -1003,8 +1003,8 @@ fn test_lbp_currency() {
     assert_eq!(LBP::NUMERIC, 422);
     assert_eq!(LBP::MINOR_UNIT, 2);
     assert_eq!(LBP::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(LBP::THOUSAND_SEPARATOR, ".");
-    assert_eq!(LBP::DECIMAL_SEPARATOR, ",");
+    assert_eq!(LBP::THOUSAND_SEPARATOR, "٬");
+    assert_eq!(LBP::DECIMAL_SEPARATOR, "٫");
 }
 
 #[test]
@@ -1027,8 +1027,8 @@ fn test_lrd_currency() {
     assert_eq!(LRD::NUMERIC, 430);
     assert_eq!(LRD::MINOR_UNIT, 2);
     assert_eq!(LRD::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(LRD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(LRD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(LRD::THOUSAND_SEPARATOR, ",");
+    assert_eq!(LRD::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1039,8 +1039,8 @@ fn test_lsl_currency() {
     assert_eq!(LSL::NUMERIC, 426);
     assert_eq!(LSL::MINOR_UNIT, 2);
     assert_eq!(LSL::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(LSL::THOUSAND_SEPARATOR, ".");
-    assert_eq!(LSL::DECIMAL_SEPARATOR, ",");
+    assert_eq!(LSL::THOUSAND_SEPARATOR, ",");
+    assert_eq!(LSL::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1087,8 +1087,8 @@ fn test_mga_currency() {
     assert_eq!(MGA::NUMERIC, 969);
     assert_eq!(MGA::MINOR_UNIT, 2);
     assert_eq!(MGA::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(MGA::THOUSAND_SEPARATOR, ".");
-    assert_eq!(MGA::DECIMAL_SEPARATOR, ",");
+    assert_eq!(MGA::THOUSAND_SEPARATOR, ",");
+    assert_eq!(MGA::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1111,8 +1111,8 @@ fn test_mmk_currency() {
     assert_eq!(MMK::NUMERIC, 104);
     assert_eq!(MMK::MINOR_UNIT, 2);
     assert_eq!(MMK::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(MMK::THOUSAND_SEPARATOR, ".");
-    assert_eq!(MMK::DECIMAL_SEPARATOR, ",");
+    assert_eq!(MMK::THOUSAND_SEPARATOR, ",");
+    assert_eq!(MMK::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1123,8 +1123,8 @@ fn test_mnt_currency() {
     assert_eq!(MNT::NUMERIC, 496);
     assert_eq!(MNT::MINOR_UNIT, 2);
     assert_eq!(MNT::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(MNT::THOUSAND_SEPARATOR, ".");
-    assert_eq!(MNT::DECIMAL_SEPARATOR, ",");
+    assert_eq!(MNT::THOUSAND_SEPARATOR, ",");
+    assert_eq!(MNT::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1135,8 +1135,8 @@ fn test_mop_currency() {
     assert_eq!(MOP::NUMERIC, 446);
     assert_eq!(MOP::MINOR_UNIT, 2);
     assert_eq!(MOP::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(MOP::THOUSAND_SEPARATOR, ".");
-    assert_eq!(MOP::DECIMAL_SEPARATOR, ",");
+    assert_eq!(MOP::THOUSAND_SEPARATOR, ",");
+    assert_eq!(MOP::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1147,8 +1147,8 @@ fn test_mru_currency() {
     assert_eq!(MRU::NUMERIC, 929);
     assert_eq!(MRU::MINOR_UNIT, 2);
     assert_eq!(MRU::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(MRU::THOUSAND_SEPARATOR, ".");
-    assert_eq!(MRU::DECIMAL_SEPARATOR, ",");
+    assert_eq!(MRU::THOUSAND_SEPARATOR, "٬");
+    assert_eq!(MRU::DECIMAL_SEPARATOR, "٫");
 }
 
 #[test]
@@ -1159,8 +1159,8 @@ fn test_mur_currency() {
     assert_eq!(MUR::NUMERIC, 480);
     assert_eq!(MUR::MINOR_UNIT, 2);
     assert_eq!(MUR::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(MUR::THOUSAND_SEPARATOR, ".");
-    assert_eq!(MUR::DECIMAL_SEPARATOR, ",");
+    assert_eq!(MUR::THOUSAND_SEPARATOR, ",");
+    assert_eq!(MUR::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1171,8 +1171,8 @@ fn test_mvr_currency() {
     assert_eq!(MVR::NUMERIC, 462);
     assert_eq!(MVR::MINOR_UNIT, 2);
     assert_eq!(MVR::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(MVR::THOUSAND_SEPARATOR, ".");
-    assert_eq!(MVR::DECIMAL_SEPARATOR, ",");
+    assert_eq!(MVR::THOUSAND_SEPARATOR, ",");
+    assert_eq!(MVR::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1183,8 +1183,8 @@ fn test_mwk_currency() {
     assert_eq!(MWK::NUMERIC, 454);
     assert_eq!(MWK::MINOR_UNIT, 2);
     assert_eq!(MWK::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(MWK::THOUSAND_SEPARATOR, ".");
-    assert_eq!(MWK::DECIMAL_SEPARATOR, ",");
+    assert_eq!(MWK::THOUSAND_SEPARATOR, ",");
+    assert_eq!(MWK::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1207,8 +1207,8 @@ fn test_mxv_currency() {
     assert_eq!(MXV::NUMERIC, 979);
     assert_eq!(MXV::MINOR_UNIT, 2);
     assert_eq!(MXV::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(MXV::THOUSAND_SEPARATOR, ".");
-    assert_eq!(MXV::DECIMAL_SEPARATOR, ",");
+    assert_eq!(MXV::THOUSAND_SEPARATOR, ",");
+    assert_eq!(MXV::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1231,7 +1231,7 @@ fn test_mzn_currency() {
     assert_eq!(MZN::NUMERIC, 943);
     assert_eq!(MZN::MINOR_UNIT, 2);
     assert_eq!(MZN::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(MZN::THOUSAND_SEPARATOR, ".");
+    assert_eq!(MZN::THOUSAND_SEPARATOR, " ");
     assert_eq!(MZN::DECIMAL_SEPARATOR, ",");
 }
 
@@ -1243,8 +1243,8 @@ fn test_nad_currency() {
     assert_eq!(NAD::NUMERIC, 516);
     assert_eq!(NAD::MINOR_UNIT, 2);
     assert_eq!(NAD::MINOR_UNIT_SYMBOL, "NA");
-    assert_eq!(NAD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(NAD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(NAD::THOUSAND_SEPARATOR, ",");
+    assert_eq!(NAD::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1279,7 +1279,7 @@ fn test_nok_currency() {
     assert_eq!(NOK::NUMERIC, 578);
     assert_eq!(NOK::MINOR_UNIT, 2);
     assert_eq!(NOK::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(NOK::THOUSAND_SEPARATOR, ".");
+    assert_eq!(NOK::THOUSAND_SEPARATOR, " ");
     assert_eq!(NOK::DECIMAL_SEPARATOR, ",");
 }
 
@@ -1315,8 +1315,8 @@ fn test_omr_currency() {
     assert_eq!(OMR::NUMERIC, 512);
     assert_eq!(OMR::MINOR_UNIT, 3);
     assert_eq!(OMR::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(OMR::THOUSAND_SEPARATOR, ".");
-    assert_eq!(OMR::DECIMAL_SEPARATOR, ",");
+    assert_eq!(OMR::THOUSAND_SEPARATOR, "٬");
+    assert_eq!(OMR::DECIMAL_SEPARATOR, "٫");
 }
 
 #[test]
@@ -1339,8 +1339,8 @@ fn test_pen_currency() {
     assert_eq!(PEN::NUMERIC, 604);
     assert_eq!(PEN::MINOR_UNIT, 2);
     assert_eq!(PEN::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(PEN::THOUSAND_SEPARATOR, ".");
-    assert_eq!(PEN::DECIMAL_SEPARATOR, ",");
+    assert_eq!(PEN::THOUSAND_SEPARATOR, ",");
+    assert_eq!(PEN::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1351,8 +1351,8 @@ fn test_pgk_currency() {
     assert_eq!(PGK::NUMERIC, 598);
     assert_eq!(PGK::MINOR_UNIT, 2);
     assert_eq!(PGK::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(PGK::THOUSAND_SEPARATOR, ".");
-    assert_eq!(PGK::DECIMAL_SEPARATOR, ",");
+    assert_eq!(PGK::THOUSAND_SEPARATOR, ",");
+    assert_eq!(PGK::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1387,7 +1387,7 @@ fn test_pln_currency() {
     assert_eq!(PLN::NUMERIC, 985);
     assert_eq!(PLN::MINOR_UNIT, 2);
     assert_eq!(PLN::MINOR_UNIT_SYMBOL, "gr");
-    assert_eq!(PLN::THOUSAND_SEPARATOR, ".");
+    assert_eq!(PLN::THOUSAND_SEPARATOR, " ");
     assert_eq!(PLN::DECIMAL_SEPARATOR, ",");
 }
 
@@ -1411,8 +1411,8 @@ fn test_qar_currency() {
     assert_eq!(QAR::NUMERIC, 634);
     assert_eq!(QAR::MINOR_UNIT, 2);
     assert_eq!(QAR::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(QAR::THOUSAND_SEPARATOR, ".");
-    assert_eq!(QAR::DECIMAL_SEPARATOR, ",");
+    assert_eq!(QAR::THOUSAND_SEPARATOR, "٬");
+    assert_eq!(QAR::DECIMAL_SEPARATOR, "٫");
 }
 
 #[test]
@@ -1447,7 +1447,7 @@ fn test_rub_currency() {
     assert_eq!(RUB::NUMERIC, 643);
     assert_eq!(RUB::MINOR_UNIT, 2);
     assert_eq!(RUB::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(RUB::THOUSAND_SEPARATOR, ".");
+    assert_eq!(RUB::THOUSAND_SEPARATOR, " ");
     assert_eq!(RUB::DECIMAL_SEPARATOR, ",");
 }
 
@@ -1459,7 +1459,7 @@ fn test_rwf_currency() {
     assert_eq!(RWF::NUMERIC, 646);
     assert_eq!(RWF::MINOR_UNIT, 0);
     assert_eq!(RWF::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(RWF::THOUSAND_SEPARATOR, ".");
+    assert_eq!(RWF::THOUSAND_SEPARATOR, " ");
     assert_eq!(RWF::DECIMAL_SEPARATOR, ",");
 }
 
@@ -1471,8 +1471,8 @@ fn test_sar_currency() {
     assert_eq!(SAR::NUMERIC, 682);
     assert_eq!(SAR::MINOR_UNIT, 2);
     assert_eq!(SAR::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(SAR::THOUSAND_SEPARATOR, ",");
-    assert_eq!(SAR::DECIMAL_SEPARATOR, ".");
+    assert_eq!(SAR::THOUSAND_SEPARATOR, "٬");
+    assert_eq!(SAR::DECIMAL_SEPARATOR, "٫");
 }
 
 #[test]
@@ -1483,8 +1483,8 @@ fn test_sbd_currency() {
     assert_eq!(SBD::NUMERIC, 90);
     assert_eq!(SBD::MINOR_UNIT, 2);
     assert_eq!(SBD::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(SBD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(SBD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(SBD::THOUSAND_SEPARATOR, ",");
+    assert_eq!(SBD::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1495,8 +1495,8 @@ fn test_scr_currency() {
     assert_eq!(SCR::NUMERIC, 690);
     assert_eq!(SCR::MINOR_UNIT, 2);
     assert_eq!(SCR::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(SCR::THOUSAND_SEPARATOR, ".");
-    assert_eq!(SCR::DECIMAL_SEPARATOR, ",");
+    assert_eq!(SCR::THOUSAND_SEPARATOR, ",");
+    assert_eq!(SCR::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1507,8 +1507,8 @@ fn test_sdg_currency() {
     assert_eq!(SDG::NUMERIC, 938);
     assert_eq!(SDG::MINOR_UNIT, 2);
     assert_eq!(SDG::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(SDG::THOUSAND_SEPARATOR, ".");
-    assert_eq!(SDG::DECIMAL_SEPARATOR, ",");
+    assert_eq!(SDG::THOUSAND_SEPARATOR, "٬");
+    assert_eq!(SDG::DECIMAL_SEPARATOR, "٫");
 }
 
 #[test]
@@ -1519,7 +1519,7 @@ fn test_sek_currency() {
     assert_eq!(SEK::NUMERIC, 752);
     assert_eq!(SEK::MINOR_UNIT, 2);
     assert_eq!(SEK::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(SEK::THOUSAND_SEPARATOR, ".");
+    assert_eq!(SEK::THOUSAND_SEPARATOR, " ");
     assert_eq!(SEK::DECIMAL_SEPARATOR, ",");
 }
 
@@ -1543,8 +1543,8 @@ fn test_shp_currency() {
     assert_eq!(SHP::NUMERIC, 654);
     assert_eq!(SHP::MINOR_UNIT, 2);
     assert_eq!(SHP::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(SHP::THOUSAND_SEPARATOR, ".");
-    assert_eq!(SHP::DECIMAL_SEPARATOR, ",");
+    assert_eq!(SHP::THOUSAND_SEPARATOR, ",");
+    assert_eq!(SHP::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1555,8 +1555,8 @@ fn test_sle_currency() {
     assert_eq!(SLE::NUMERIC, 925);
     assert_eq!(SLE::MINOR_UNIT, 2);
     assert_eq!(SLE::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(SLE::THOUSAND_SEPARATOR, ".");
-    assert_eq!(SLE::DECIMAL_SEPARATOR, ",");
+    assert_eq!(SLE::THOUSAND_SEPARATOR, ",");
+    assert_eq!(SLE::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1567,8 +1567,8 @@ fn test_sll_currency() {
     assert_eq!(SLL::NUMERIC, 694);
     assert_eq!(SLL::MINOR_UNIT, 2);
     assert_eq!(SLL::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(SLL::THOUSAND_SEPARATOR, ".");
-    assert_eq!(SLL::DECIMAL_SEPARATOR, ",");
+    assert_eq!(SLL::THOUSAND_SEPARATOR, ",");
+    assert_eq!(SLL::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1579,8 +1579,8 @@ fn test_sos_currency() {
     assert_eq!(SOS::NUMERIC, 706);
     assert_eq!(SOS::MINOR_UNIT, 2);
     assert_eq!(SOS::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(SOS::THOUSAND_SEPARATOR, ".");
-    assert_eq!(SOS::DECIMAL_SEPARATOR, ",");
+    assert_eq!(SOS::THOUSAND_SEPARATOR, ",");
+    assert_eq!(SOS::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1603,8 +1603,8 @@ fn test_ssp_currency() {
     assert_eq!(SSP::NUMERIC, 728);
     assert_eq!(SSP::MINOR_UNIT, 2);
     assert_eq!(SSP::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(SSP::THOUSAND_SEPARATOR, ".");
-    assert_eq!(SSP::DECIMAL_SEPARATOR, ",");
+    assert_eq!(SSP::THOUSAND_SEPARATOR, ",");
+    assert_eq!(SSP::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1615,7 +1615,7 @@ fn test_stn_currency() {
     assert_eq!(STN::NUMERIC, 930);
     assert_eq!(STN::MINOR_UNIT, 2);
     assert_eq!(STN::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(STN::THOUSAND_SEPARATOR, ".");
+    assert_eq!(STN::THOUSAND_SEPARATOR, " ");
     assert_eq!(STN::DECIMAL_SEPARATOR, ",");
 }
 
@@ -1627,8 +1627,8 @@ fn test_svc_currency() {
     assert_eq!(SVC::NUMERIC, 222);
     assert_eq!(SVC::MINOR_UNIT, 2);
     assert_eq!(SVC::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(SVC::THOUSAND_SEPARATOR, ".");
-    assert_eq!(SVC::DECIMAL_SEPARATOR, ",");
+    assert_eq!(SVC::THOUSAND_SEPARATOR, ",");
+    assert_eq!(SVC::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1639,8 +1639,8 @@ fn test_syp_currency() {
     assert_eq!(SYP::NUMERIC, 760);
     assert_eq!(SYP::MINOR_UNIT, 2);
     assert_eq!(SYP::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(SYP::THOUSAND_SEPARATOR, ".");
-    assert_eq!(SYP::DECIMAL_SEPARATOR, ",");
+    assert_eq!(SYP::THOUSAND_SEPARATOR, "٬");
+    assert_eq!(SYP::DECIMAL_SEPARATOR, "٫");
 }
 
 #[test]
@@ -1651,8 +1651,8 @@ fn test_szl_currency() {
     assert_eq!(SZL::NUMERIC, 748);
     assert_eq!(SZL::MINOR_UNIT, 2);
     assert_eq!(SZL::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(SZL::THOUSAND_SEPARATOR, ".");
-    assert_eq!(SZL::DECIMAL_SEPARATOR, ",");
+    assert_eq!(SZL::THOUSAND_SEPARATOR, ",");
+    assert_eq!(SZL::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1675,7 +1675,7 @@ fn test_tjs_currency() {
     assert_eq!(TJS::NUMERIC, 972);
     assert_eq!(TJS::MINOR_UNIT, 2);
     assert_eq!(TJS::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(TJS::THOUSAND_SEPARATOR, ".");
+    assert_eq!(TJS::THOUSAND_SEPARATOR, " ");
     assert_eq!(TJS::DECIMAL_SEPARATOR, ",");
 }
 
@@ -1687,7 +1687,7 @@ fn test_tmt_currency() {
     assert_eq!(TMT::NUMERIC, 934);
     assert_eq!(TMT::MINOR_UNIT, 2);
     assert_eq!(TMT::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(TMT::THOUSAND_SEPARATOR, ".");
+    assert_eq!(TMT::THOUSAND_SEPARATOR, " ");
     assert_eq!(TMT::DECIMAL_SEPARATOR, ",");
 }
 
@@ -1711,8 +1711,8 @@ fn test_top_currency() {
     assert_eq!(TOP::NUMERIC, 776);
     assert_eq!(TOP::MINOR_UNIT, 2);
     assert_eq!(TOP::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(TOP::THOUSAND_SEPARATOR, ".");
-    assert_eq!(TOP::DECIMAL_SEPARATOR, ",");
+    assert_eq!(TOP::THOUSAND_SEPARATOR, ",");
+    assert_eq!(TOP::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1735,8 +1735,8 @@ fn test_ttd_currency() {
     assert_eq!(TTD::NUMERIC, 780);
     assert_eq!(TTD::MINOR_UNIT, 2);
     assert_eq!(TTD::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(TTD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(TTD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(TTD::THOUSAND_SEPARATOR, ",");
+    assert_eq!(TTD::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1771,7 +1771,7 @@ fn test_uah_currency() {
     assert_eq!(UAH::NUMERIC, 980);
     assert_eq!(UAH::MINOR_UNIT, 2);
     assert_eq!(UAH::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(UAH::THOUSAND_SEPARATOR, ".");
+    assert_eq!(UAH::THOUSAND_SEPARATOR, " ");
     assert_eq!(UAH::DECIMAL_SEPARATOR, ",");
 }
 
@@ -1807,8 +1807,8 @@ fn test_usn_currency() {
     assert_eq!(USN::NUMERIC, 997);
     assert_eq!(USN::MINOR_UNIT, 2);
     assert_eq!(USN::MINOR_UNIT_SYMBOL, "¢");
-    assert_eq!(USN::THOUSAND_SEPARATOR, ".");
-    assert_eq!(USN::DECIMAL_SEPARATOR, ",");
+    assert_eq!(USN::THOUSAND_SEPARATOR, ",");
+    assert_eq!(USN::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1855,7 +1855,7 @@ fn test_uzs_currency() {
     assert_eq!(UZS::NUMERIC, 860);
     assert_eq!(UZS::MINOR_UNIT, 2);
     assert_eq!(UZS::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(UZS::THOUSAND_SEPARATOR, ".");
+    assert_eq!(UZS::THOUSAND_SEPARATOR, " ");
     assert_eq!(UZS::DECIMAL_SEPARATOR, ",");
 }
 
@@ -1903,8 +1903,8 @@ fn test_vuv_currency() {
     assert_eq!(VUV::NUMERIC, 548);
     assert_eq!(VUV::MINOR_UNIT, 0);
     assert_eq!(VUV::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(VUV::THOUSAND_SEPARATOR, ".");
-    assert_eq!(VUV::DECIMAL_SEPARATOR, ",");
+    assert_eq!(VUV::THOUSAND_SEPARATOR, ",");
+    assert_eq!(VUV::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1915,8 +1915,8 @@ fn test_wst_currency() {
     assert_eq!(WST::NUMERIC, 882);
     assert_eq!(WST::MINOR_UNIT, 2);
     assert_eq!(WST::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(WST::THOUSAND_SEPARATOR, ".");
-    assert_eq!(WST::DECIMAL_SEPARATOR, ",");
+    assert_eq!(WST::THOUSAND_SEPARATOR, ",");
+    assert_eq!(WST::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1927,7 +1927,7 @@ fn test_xaf_currency() {
     assert_eq!(XAF::NUMERIC, 950);
     assert_eq!(XAF::MINOR_UNIT, 0);
     assert_eq!(XAF::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(XAF::THOUSAND_SEPARATOR, ".");
+    assert_eq!(XAF::THOUSAND_SEPARATOR, " ");
     assert_eq!(XAF::DECIMAL_SEPARATOR, ",");
 }
 
@@ -1939,8 +1939,8 @@ fn test_xag_currency() {
     assert_eq!(XAG::NUMERIC, 961);
     assert_eq!(XAG::MINOR_UNIT, 0);
     assert_eq!(XAG::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(XAG::THOUSAND_SEPARATOR, ".");
-    assert_eq!(XAG::DECIMAL_SEPARATOR, ",");
+    assert_eq!(XAG::THOUSAND_SEPARATOR, ",");
+    assert_eq!(XAG::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1951,8 +1951,8 @@ fn test_xau_currency() {
     assert_eq!(XAU::NUMERIC, 959);
     assert_eq!(XAU::MINOR_UNIT, 0);
     assert_eq!(XAU::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(XAU::THOUSAND_SEPARATOR, ".");
-    assert_eq!(XAU::DECIMAL_SEPARATOR, ",");
+    assert_eq!(XAU::THOUSAND_SEPARATOR, ",");
+    assert_eq!(XAU::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1963,8 +1963,8 @@ fn test_xba_currency() {
     assert_eq!(XBA::NUMERIC, 955);
     assert_eq!(XBA::MINOR_UNIT, 0);
     assert_eq!(XBA::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(XBA::THOUSAND_SEPARATOR, ".");
-    assert_eq!(XBA::DECIMAL_SEPARATOR, ",");
+    assert_eq!(XBA::THOUSAND_SEPARATOR, ",");
+    assert_eq!(XBA::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1975,8 +1975,8 @@ fn test_xbb_currency() {
     assert_eq!(XBB::NUMERIC, 956);
     assert_eq!(XBB::MINOR_UNIT, 0);
     assert_eq!(XBB::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(XBB::THOUSAND_SEPARATOR, ".");
-    assert_eq!(XBB::DECIMAL_SEPARATOR, ",");
+    assert_eq!(XBB::THOUSAND_SEPARATOR, ",");
+    assert_eq!(XBB::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1987,8 +1987,8 @@ fn test_xbc_currency() {
     assert_eq!(XBC::NUMERIC, 957);
     assert_eq!(XBC::MINOR_UNIT, 0);
     assert_eq!(XBC::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(XBC::THOUSAND_SEPARATOR, ".");
-    assert_eq!(XBC::DECIMAL_SEPARATOR, ",");
+    assert_eq!(XBC::THOUSAND_SEPARATOR, ",");
+    assert_eq!(XBC::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -1999,8 +1999,8 @@ fn test_xbd_currency() {
     assert_eq!(XBD::NUMERIC, 958);
     assert_eq!(XBD::MINOR_UNIT, 0);
     assert_eq!(XBD::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(XBD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(XBD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(XBD::THOUSAND_SEPARATOR, ",");
+    assert_eq!(XBD::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -2011,8 +2011,8 @@ fn test_xcd_currency() {
     assert_eq!(XCD::NUMERIC, 951);
     assert_eq!(XCD::MINOR_UNIT, 2);
     assert_eq!(XCD::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(XCD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(XCD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(XCD::THOUSAND_SEPARATOR, ",");
+    assert_eq!(XCD::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -2035,8 +2035,8 @@ fn test_xdr_currency() {
     assert_eq!(XDR::NUMERIC, 960);
     assert_eq!(XDR::MINOR_UNIT, 0);
     assert_eq!(XDR::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(XDR::THOUSAND_SEPARATOR, ".");
-    assert_eq!(XDR::DECIMAL_SEPARATOR, ",");
+    assert_eq!(XDR::THOUSAND_SEPARATOR, ",");
+    assert_eq!(XDR::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -2047,7 +2047,7 @@ fn test_xof_currency() {
     assert_eq!(XOF::NUMERIC, 952);
     assert_eq!(XOF::MINOR_UNIT, 0);
     assert_eq!(XOF::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(XOF::THOUSAND_SEPARATOR, ".");
+    assert_eq!(XOF::THOUSAND_SEPARATOR, " ");
     assert_eq!(XOF::DECIMAL_SEPARATOR, ",");
 }
 
@@ -2059,8 +2059,8 @@ fn test_xpd_currency() {
     assert_eq!(XPD::NUMERIC, 964);
     assert_eq!(XPD::MINOR_UNIT, 0);
     assert_eq!(XPD::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(XPD::THOUSAND_SEPARATOR, ".");
-    assert_eq!(XPD::DECIMAL_SEPARATOR, ",");
+    assert_eq!(XPD::THOUSAND_SEPARATOR, ",");
+    assert_eq!(XPD::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -2071,7 +2071,7 @@ fn test_xpf_currency() {
     assert_eq!(XPF::NUMERIC, 953);
     assert_eq!(XPF::MINOR_UNIT, 0);
     assert_eq!(XPF::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(XPF::THOUSAND_SEPARATOR, ".");
+    assert_eq!(XPF::THOUSAND_SEPARATOR, " ");
     assert_eq!(XPF::DECIMAL_SEPARATOR, ",");
 }
 
@@ -2083,8 +2083,8 @@ fn test_xpt_currency() {
     assert_eq!(XPT::NUMERIC, 962);
     assert_eq!(XPT::MINOR_UNIT, 0);
     assert_eq!(XPT::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(XPT::THOUSAND_SEPARATOR, ".");
-    assert_eq!(XPT::DECIMAL_SEPARATOR, ",");
+    assert_eq!(XPT::THOUSAND_SEPARATOR, ",");
+    assert_eq!(XPT::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -2095,8 +2095,8 @@ fn test_xsu_currency() {
     assert_eq!(XSU::NUMERIC, 994);
     assert_eq!(XSU::MINOR_UNIT, 0);
     assert_eq!(XSU::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(XSU::THOUSAND_SEPARATOR, ".");
-    assert_eq!(XSU::DECIMAL_SEPARATOR, ",");
+    assert_eq!(XSU::THOUSAND_SEPARATOR, ",");
+    assert_eq!(XSU::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -2107,8 +2107,8 @@ fn test_xts_currency() {
     assert_eq!(XTS::NUMERIC, 963);
     assert_eq!(XTS::MINOR_UNIT, 0);
     assert_eq!(XTS::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(XTS::THOUSAND_SEPARATOR, ".");
-    assert_eq!(XTS::DECIMAL_SEPARATOR, ",");
+    assert_eq!(XTS::THOUSAND_SEPARATOR, ",");
+    assert_eq!(XTS::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -2119,8 +2119,8 @@ fn test_xua_currency() {
     assert_eq!(XUA::NUMERIC, 965);
     assert_eq!(XUA::MINOR_UNIT, 0);
     assert_eq!(XUA::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(XUA::THOUSAND_SEPARATOR, ".");
-    assert_eq!(XUA::DECIMAL_SEPARATOR, ",");
+    assert_eq!(XUA::THOUSAND_SEPARATOR, ",");
+    assert_eq!(XUA::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -2131,8 +2131,8 @@ fn test_xxx_currency() {
     assert_eq!(XXX::NUMERIC, 999);
     assert_eq!(XXX::MINOR_UNIT, 0);
     assert_eq!(XXX::MINOR_UNIT_SYMBOL, "");
-    assert_eq!(XXX::THOUSAND_SEPARATOR, ".");
-    assert_eq!(XXX::DECIMAL_SEPARATOR, ",");
+    assert_eq!(XXX::THOUSAND_SEPARATOR, ",");
+    assert_eq!(XXX::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -2143,8 +2143,8 @@ fn test_yer_currency() {
     assert_eq!(YER::NUMERIC, 886);
     assert_eq!(YER::MINOR_UNIT, 2);
     assert_eq!(YER::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(YER::THOUSAND_SEPARATOR, ".");
-    assert_eq!(YER::DECIMAL_SEPARATOR, ",");
+    assert_eq!(YER::THOUSAND_SEPARATOR, "٬");
+    assert_eq!(YER::DECIMAL_SEPARATOR, "٫");
 }
 
 #[test]
@@ -2155,8 +2155,8 @@ fn test_zar_currency() {
     assert_eq!(ZAR::NUMERIC, 710);
     assert_eq!(ZAR::MINOR_UNIT, 2);
     assert_eq!(ZAR::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(ZAR::THOUSAND_SEPARATOR, ",");
-    assert_eq!(ZAR::DECIMAL_SEPARATOR, ".");
+    assert_eq!(ZAR::THOUSAND_SEPARATOR, " ");
+    assert_eq!(ZAR::DECIMAL_SEPARATOR, ",");
 }
 
 #[test]
@@ -2179,8 +2179,8 @@ fn test_zwg_currency() {
     assert_eq!(ZWG::NUMERIC, 924);
     assert_eq!(ZWG::MINOR_UNIT, 2);
     assert_eq!(ZWG::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(ZWG::THOUSAND_SEPARATOR, ".");
-    assert_eq!(ZWG::DECIMAL_SEPARATOR, ",");
+    assert_eq!(ZWG::THOUSAND_SEPARATOR, ",");
+    assert_eq!(ZWG::DECIMAL_SEPARATOR, ".");
 }
 
 #[test]
@@ -2191,6 +2191,6 @@ fn test_zwl_currency() {
     assert_eq!(ZWL::NUMERIC, 932);
     assert_eq!(ZWL::MINOR_UNIT, 2);
     assert_eq!(ZWL::MINOR_UNIT_SYMBOL, "minor");
-    assert_eq!(ZWL::THOUSAND_SEPARATOR, ".");
-    assert_eq!(ZWL::DECIMAL_SEPARATOR, ",");
+    assert_eq!(ZWL::THOUSAND_SEPARATOR, ",");
+    assert_eq!(ZWL::DECIMAL_SEPARATOR, ".");
 }
