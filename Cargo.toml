@@ -1,6 +1,6 @@
 [package]
 name = "currencylib"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 authors = ["Muhammad Fathir Irhas <fathir.irhas@gmail.com>"]
 description = "A library containing types and metadata for currencies."
