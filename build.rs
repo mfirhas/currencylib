@@ -1,12 +1,15 @@
 #![forbid(clippy::unwrap_used)]
 
 use iso_currency::IntoEnumIterator;
-use phf::phf_set;
 use std::env;
 use std::fs::File;
 use std::io::Write;
 use std::path::Path;
+use std::str::FromStr;
 use std::sync::LazyLock;
+
+#[path = "locale.rs"]
+mod locale;
 
 /// If a currency has no symbol gives it default.
 const DEFAULT_MINOR_UNIT_SYMBOL: &str = "minor";
@@ -28,7 +31,7 @@ fn generate_iso() -> Result<(), String> {
 
     // Generate for ALL ISO currencies
     for currency in iso_currency::Currency::iter() {
-        let isocurrency: IsoCurrency = currency.into();
+        let isocurrency: IsoCurrency = currency.try_into()?;
 
         // Write struct and impl for each currency
         writeln!(
@@ -49,7 +52,7 @@ impl Currency for {} {{
     const DECIMAL_SEPARATOR: &'static str = \"{}\";
 }}
 ",
-            isocurrency.name.clone(),
+            isocurrency.name,
             isocurrency.code,
             isocurrency.code,
             isocurrency.code,
@@ -68,57 +71,6 @@ impl Currency for {} {{
 
     Ok(())
 }
-
-/// List of countries whose currency's thousands separated by comma(",")
-static COMMA_SEPARATED_THOUSAND_CURRENCIES: phf::Set<&'static str> = phf_set! {
-        // North America
-        "USD", // United States Dollar
-        "CAD", // Canadian Dollar
-        "MXN", // Mexican Peso
-        // Central America & Caribbean
-        "GTQ", // Guatemalan Quetzal
-        "HNL", // Honduran Lempira
-        "NIO", // Nicaraguan Córdoba
-        "CRC", // Costa Rican Colón
-        "PAB", // Panamanian Balboa
-        "DOP", // Dominican Peso
-        // Asia
-        "CNY", // Chinese Yuan
-        "JPY", // Japanese Yen
-        "KRW", // South Korean Won
-        "TWD", // Taiwan Dollar
-        "THB", // Thai Baht
-        "MYR", // Malaysian Ringgit
-        "SGD", // Singapore Dollar
-        "PHP", // Philippine Peso
-        "INR", // Indian Rupee
-        "PKR", // Pakistani Rupee
-        "BDT", // Bangladeshi Taka
-        "HKD", // Hong Kong Dollar
-        "LKR", // Sri Lankan Rupee
-        "NPR", // Nepalese Rupee
-        // Africa
-        "ZAR", // South African Rand
-        "BWP", // Botswana Pula
-        "ZMW", // Zambian Kwacha
-        "KES", // Kenyan Shilling
-        "TZS", // Tanzanian Shilling
-        "UGX", // Ugandan Shilling
-        "GHS", // Ghanaian Cedi
-        "NGN", // Nigerian Naira
-        // Oceania
-        "AUD", // Australian Dollar
-        "NZD", // New Zealand Dollar
-        // Europe (isolated)
-        "GBP", // British Pound
-        "CHF", // Swiss Franc
-        "ISK", // Icelandic Króna
-        // Middle East
-        "SAR", // Saudi Riyal
-        "AED", // UAE Dirham
-        //
-        "ILS"
-};
 
 /// Facade for iso currencies
 struct IsoCurrency {
@@ -141,8 +93,10 @@ impl IsoCurrency {
     }
 }
 
-impl From<iso_currency::Currency> for IsoCurrency {
-    fn from(currency: iso_currency::Currency) -> Self {
+impl TryFrom<iso_currency::Currency> for IsoCurrency {
+    type Error = String;
+
+    fn try_from(currency: iso_currency::Currency) -> Result<Self, Self::Error> {
         let code = currency.code();
         let symbol = currency.symbol();
         let name = currency.name();
@@ -156,7 +110,7 @@ impl From<iso_currency::Currency> for IsoCurrency {
             DEFAULT_MINOR_UNIT_SYMBOL
         };
 
-        let separator: Separator = code.to_string().into();
+        let separator = code.parse::<Separator>()?;
 
         let mut isocurrency = Self {
             code: code.into(),
@@ -173,7 +127,7 @@ impl From<iso_currency::Currency> for IsoCurrency {
             isocurrency.r#override(func);
         }
 
-        isocurrency
+        Ok(isocurrency)
     }
 }
 
@@ -182,20 +136,36 @@ struct Separator {
     pub decimal_separator: String,
 }
 
-impl From<String> for Separator {
-    fn from(value: String) -> Self {
-        if let Some(c) = iso_currency::Currency::from_code(&value)
-            && COMMA_SEPARATED_THOUSAND_CURRENCIES.contains(c.code())
-        {
-            Separator {
-                thousand_separator: ",".into(),
-                decimal_separator: ".".into(),
-            }
+impl FromStr for Separator {
+    type Err = String;
+
+    /// Instantiate Separator from currency alpha code.
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        use icu::decimal::provider::{Baked, DecimalSymbolsV1};
+        use icu::locale::Locale;
+        use icu_provider::prelude::*;
+
+        if let Some(loc_code) = locale::CURRENCY_TO_LOCALE.get(s) {
+            let loc = loc_code.parse::<Locale>().map_err(|err| err.to_string())?;
+
+            let data_locale: DataLocale = (&loc).into();
+            let id = DataIdentifierBorrowed::for_locale(&data_locale);
+
+            let resp: DataResponse<DecimalSymbolsV1> = Baked
+                .load(DataRequest {
+                    id,
+                    ..Default::default()
+                })
+                .map_err(|err| err.to_string())?;
+
+            let symbols = resp.payload.get();
+
+            Ok(Self {
+                thousand_separator: symbols.grouping_separator().into(),
+                decimal_separator: symbols.decimal_separator().into(),
+            })
         } else {
-            Separator {
-                thousand_separator: ".".into(),
-                decimal_separator: ",".into(),
-            }
+            Err(format!("Currency Code {} not found in ISO 4217", s))
         }
     }
 }
