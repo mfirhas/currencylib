@@ -28,6 +28,7 @@ fn generate_iso() -> Result<(), String> {
     let mut f = File::create(&dest_path).map_err(|err| err.to_string())?;
 
     writeln!(f, "use crate::Currency;").map_err(|err| err.to_string())?;
+    writeln!(f, "use core::str::FromStr;").map_err(|err| err.to_string())?;
 
     // Generate for ALL ISO currencies
     for currency in iso_currency::Currency::iter() {
@@ -51,6 +52,19 @@ impl Currency for {} {{
     const THOUSAND_SEPARATOR: &'static str = \"{}\";
     const DECIMAL_SEPARATOR: &'static str = \"{}\";
 }}
+
+impl FromStr for {} {{
+    type Err = &'static str;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {{
+        let s = s.trim();
+        if s != {}::CODE {{
+            return Err(\"invalid currency code\");
+        }}
+
+        Ok({})
+    }}
+}}
 ",
             isocurrency.name,
             isocurrency.code,
@@ -63,6 +77,9 @@ impl Currency for {} {{
             isocurrency.minor_unit_symbol,
             isocurrency.separator.thousand_separator,
             isocurrency.separator.decimal_separator,
+            isocurrency.code,
+            isocurrency.code,
+            isocurrency.code
         )
         .map_err(|err| err.to_string())?;
     }

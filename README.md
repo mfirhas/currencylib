@@ -16,6 +16,7 @@ The crate contains 2 main component the trait(`Currency`) and the types implemen
 
 ```rust
 use currencylib::{Currency, USD /* ...and other iso 4217 currencies you want use, e.g. EUR, CAD, etc*/};
+use std::str::FromStr;
 
 assert_eq!(USD::CODE, "USD");
 assert_eq!(USD::SYMBOL, "$");
@@ -25,4 +26,7 @@ assert_eq!(USD::MINOR_UNIT_SYMBOL, "¢");
 assert_eq!(USD::NUMERIC, 840_u16);
 assert_eq!(USD::THOUSAND_SEPARATOR, ",");
 assert_eq!(USD::DECIMAL_SEPARATOR, ".");
+
+let usd = USD::from_str("USD").unwrap();
+assert_eq!(usd, USD);
 ```

@@ -1,10 +1,23 @@
 use crate::*;
+use core::str::FromStr;
 
 #[test]
 fn test_derives() {
     assert_eq!(USD, USD);
     assert_eq!(EUR, EUR);
     assert_eq!(JPY, JPY);
+
+    let a = USD::from_str("USD").unwrap();
+    assert_eq!(a, USD);
+
+    let a = USD::from_str("UsD");
+    assert!(a.is_err());
+
+    let a = EUR::from_str("IDR");
+    assert!(a.is_err());
+
+    let a = EUR::from_str("     EUR ").unwrap();
+    assert_eq!(a, EUR);
 
     // //no need to assert these since it'a already statically checked at compile-time.
     // assert_ne!(USD, EUR);
