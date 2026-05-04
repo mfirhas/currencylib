@@ -1,7 +1,7 @@
 use phf::phf_map;
 
 /// List of currency code mapping to locale
-pub static CURRENCY_TO_LOCALE: phf::Map<&'static str, &'static str> = phf_map! {
+pub static CURRENCY_DATA: phf::Map<&'static str, &'static str> = phf_map! {
     "AED" => "ar-AE",
     "AFN" => "fa-AF",
     "ALL" => "sq-AL",

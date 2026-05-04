@@ -8,8 +8,8 @@ use std::path::Path;
 use std::str::FromStr;
 use std::sync::LazyLock;
 
-#[path = "locale.rs"]
-mod locale;
+#[path = "data.rs"]
+mod data;
 
 /// If a currency has no symbol gives it default.
 const DEFAULT_MINOR_UNIT_SYMBOL: &str = "minor";
@@ -164,7 +164,7 @@ impl FromStr for Separator {
         use icu::locale::Locale;
         use icu_provider::prelude::*;
 
-        if let Some(loc_code) = locale::CURRENCY_TO_LOCALE.get(s) {
+        if let Some(loc_code) = data::CURRENCY_DATA.get(s) {
             let loc = loc_code.parse::<Locale>().map_err(|err| err.to_string())?;
 
             let data_locale: DataLocale = (&loc).into();
