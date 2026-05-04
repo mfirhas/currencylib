@@ -189,5 +189,4 @@ pub static CURRENCY_DATA: phf::Map<&'static str, Data> = phf_map! {
     "ZAR" => Data { origin: "South Africa", locale: "en-ZA", minor_unit_symbol: "c" },
     "ZMW" => Data { origin: "Zambia", locale: "en-ZM", minor_unit_symbol: "¢" },
     "ZWL" => Data { origin: "Zimbabwe", locale: "en-ZW", minor_unit_symbol: "¢" },
-    "ZWG" => Data { origin: "Zimbabwe", locale: "en-ZW", minor_unit_symbol: "¢" },
-};
+    "ZWG" => Data { origin: "Zimbabwe", locale: "en-ZW", minor_unit_symbol: "¢" },};
