@@ -118,16 +118,15 @@ impl TryFrom<iso_currency::Currency> for IsoCurrency {
         let symbol = currency.symbol();
         let name = currency.name();
         let numeric = currency.numeric();
-        let minor_unit = currency
-            .exponent()
-            .ok_or("failed getting minor unit from iso_currency".into())?;
-        let minor_unit_symbol = if let Some(ref minor_symbol) = symbol.subunit_symbol {
-            minor_symbol
-        } else if minor_unit == 0 {
-            ""
-        } else {
-            DEFAULT_MINOR_UNIT_SYMBOL
-        };
+        let minor_unit = currency.exponent().unwrap_or_default();
+        let minor_unit_symbol: &str = data::CURRENCY_DATA
+            .get(code)
+            .map(|d| d.minor_unit_symbol)
+            .unwrap_or(if minor_unit == 0 {
+                ""
+            } else {
+                DEFAULT_MINOR_UNIT_SYMBOL
+            });
 
         let separator = code.parse::<Separator>()?;
 
@@ -164,8 +163,8 @@ impl FromStr for Separator {
         use icu::locale::Locale;
         use icu_provider::prelude::*;
 
-        if let Some(loc_code) = data::CURRENCY_DATA.get(s) {
-            let loc = loc_code.parse::<Locale>().map_err(|err| err.to_string())?;
+        if let Some(data_entry) = data::CURRENCY_DATA.get(s) {
+            let loc = data_entry.locale.parse::<Locale>().map_err(|err| err.to_string())?;
 
             let data_locale: DataLocale = (&loc).into();
             let id = DataIdentifierBorrowed::for_locale(&data_locale);

@@ -31,7 +31,7 @@ fn test_aed_currency() {
     assert_eq!(AED::NAME, "United Arab Emirates dirham");
     assert_eq!(AED::NUMERIC, 784);
     assert_eq!(AED::MINOR_UNIT, 2);
-    assert_eq!(AED::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(AED::MINOR_UNIT_SYMBOL, "فلس");
     assert_eq!(AED::THOUSAND_SEPARATOR, ",");
     assert_eq!(AED::DECIMAL_SEPARATOR, ".");
 }
@@ -43,7 +43,7 @@ fn test_afn_currency() {
     assert_eq!(AFN::NAME, "Afghan afghani");
     assert_eq!(AFN::NUMERIC, 971);
     assert_eq!(AFN::MINOR_UNIT, 2);
-    assert_eq!(AFN::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(AFN::MINOR_UNIT_SYMBOL, "پول");
     assert_eq!(AFN::THOUSAND_SEPARATOR, "٬");
     assert_eq!(AFN::DECIMAL_SEPARATOR, "٫");
 }
@@ -67,7 +67,7 @@ fn test_amd_currency() {
     assert_eq!(AMD::NAME, "Armenian dram");
     assert_eq!(AMD::NUMERIC, 51);
     assert_eq!(AMD::MINOR_UNIT, 2);
-    assert_eq!(AMD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(AMD::MINOR_UNIT_SYMBOL, "լ");
     assert_eq!(AMD::THOUSAND_SEPARATOR, " ");
     assert_eq!(AMD::DECIMAL_SEPARATOR, ",");
 }
@@ -79,7 +79,7 @@ fn test_aoa_currency() {
     assert_eq!(AOA::NAME, "Angolan kwanza");
     assert_eq!(AOA::NUMERIC, 973);
     assert_eq!(AOA::MINOR_UNIT, 2);
-    assert_eq!(AOA::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(AOA::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(AOA::THOUSAND_SEPARATOR, " ");
     assert_eq!(AOA::DECIMAL_SEPARATOR, ",");
 }
@@ -91,7 +91,7 @@ fn test_ars_currency() {
     assert_eq!(ARS::NAME, "Argentine peso");
     assert_eq!(ARS::NUMERIC, 32);
     assert_eq!(ARS::MINOR_UNIT, 2);
-    assert_eq!(ARS::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(ARS::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(ARS::THOUSAND_SEPARATOR, ".");
     assert_eq!(ARS::DECIMAL_SEPARATOR, ",");
 }
@@ -115,7 +115,7 @@ fn test_awg_currency() {
     assert_eq!(AWG::NAME, "Aruban florin");
     assert_eq!(AWG::NUMERIC, 533);
     assert_eq!(AWG::MINOR_UNIT, 2);
-    assert_eq!(AWG::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(AWG::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(AWG::THOUSAND_SEPARATOR, ".");
     assert_eq!(AWG::DECIMAL_SEPARATOR, ",");
 }
@@ -127,7 +127,7 @@ fn test_azn_currency() {
     assert_eq!(AZN::NAME, "Azerbaijani manat");
     assert_eq!(AZN::NUMERIC, 944);
     assert_eq!(AZN::MINOR_UNIT, 2);
-    assert_eq!(AZN::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(AZN::MINOR_UNIT_SYMBOL, "q");
     assert_eq!(AZN::THOUSAND_SEPARATOR, ".");
     assert_eq!(AZN::DECIMAL_SEPARATOR, ",");
 }
@@ -139,7 +139,7 @@ fn test_bam_currency() {
     assert_eq!(BAM::NAME, "Bosnia and Herzegovina convertible mark");
     assert_eq!(BAM::NUMERIC, 977);
     assert_eq!(BAM::MINOR_UNIT, 2);
-    assert_eq!(BAM::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(BAM::MINOR_UNIT_SYMBOL, "pf");
     assert_eq!(BAM::THOUSAND_SEPARATOR, ".");
     assert_eq!(BAM::DECIMAL_SEPARATOR, ",");
 }
@@ -151,7 +151,7 @@ fn test_bbd_currency() {
     assert_eq!(BBD::NAME, "Barbados dollar");
     assert_eq!(BBD::NUMERIC, 52);
     assert_eq!(BBD::MINOR_UNIT, 2);
-    assert_eq!(BBD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(BBD::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(BBD::THOUSAND_SEPARATOR, ",");
     assert_eq!(BBD::DECIMAL_SEPARATOR, ".");
 }
@@ -163,7 +163,7 @@ fn test_bdt_currency() {
     assert_eq!(BDT::NAME, "Bangladeshi taka");
     assert_eq!(BDT::NUMERIC, 50);
     assert_eq!(BDT::MINOR_UNIT, 2);
-    assert_eq!(BDT::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(BDT::MINOR_UNIT_SYMBOL, "p");
     assert_eq!(BDT::THOUSAND_SEPARATOR, ",");
     assert_eq!(BDT::DECIMAL_SEPARATOR, ".");
 }
@@ -175,7 +175,7 @@ fn test_bgn_currency() {
     assert_eq!(BGN::NAME, "Bulgarian lev");
     assert_eq!(BGN::NUMERIC, 975);
     assert_eq!(BGN::MINOR_UNIT, 2);
-    assert_eq!(BGN::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(BGN::MINOR_UNIT_SYMBOL, "ст.");
     assert_eq!(BGN::THOUSAND_SEPARATOR, " ");
     assert_eq!(BGN::DECIMAL_SEPARATOR, ",");
 }
@@ -187,7 +187,7 @@ fn test_bhd_currency() {
     assert_eq!(BHD::NAME, "Bahraini dinar");
     assert_eq!(BHD::NUMERIC, 48);
     assert_eq!(BHD::MINOR_UNIT, 3);
-    assert_eq!(BHD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(BHD::MINOR_UNIT_SYMBOL, "فلس");
     assert_eq!(BHD::THOUSAND_SEPARATOR, "٬");
     assert_eq!(BHD::DECIMAL_SEPARATOR, "٫");
 }
@@ -211,7 +211,7 @@ fn test_bmd_currency() {
     assert_eq!(BMD::NAME, "Bermudian dollar");
     assert_eq!(BMD::NUMERIC, 60);
     assert_eq!(BMD::MINOR_UNIT, 2);
-    assert_eq!(BMD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(BMD::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(BMD::THOUSAND_SEPARATOR, ",");
     assert_eq!(BMD::DECIMAL_SEPARATOR, ".");
 }
@@ -223,7 +223,7 @@ fn test_bnd_currency() {
     assert_eq!(BND::NAME, "Brunei dollar");
     assert_eq!(BND::NUMERIC, 96);
     assert_eq!(BND::MINOR_UNIT, 2);
-    assert_eq!(BND::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(BND::MINOR_UNIT_SYMBOL, "sen");
     assert_eq!(BND::THOUSAND_SEPARATOR, ".");
     assert_eq!(BND::DECIMAL_SEPARATOR, ",");
 }
@@ -235,7 +235,7 @@ fn test_bob_currency() {
     assert_eq!(BOB::NAME, "Boliviano");
     assert_eq!(BOB::NUMERIC, 68);
     assert_eq!(BOB::MINOR_UNIT, 2);
-    assert_eq!(BOB::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(BOB::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(BOB::THOUSAND_SEPARATOR, ".");
     assert_eq!(BOB::DECIMAL_SEPARATOR, ",");
 }
@@ -259,7 +259,7 @@ fn test_brl_currency() {
     assert_eq!(BRL::NAME, "Brazilian real");
     assert_eq!(BRL::NUMERIC, 986);
     assert_eq!(BRL::MINOR_UNIT, 2);
-    assert_eq!(BRL::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(BRL::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(BRL::THOUSAND_SEPARATOR, ".");
     assert_eq!(BRL::DECIMAL_SEPARATOR, ",");
 }
@@ -271,7 +271,7 @@ fn test_bsd_currency() {
     assert_eq!(BSD::NAME, "Bahamian dollar");
     assert_eq!(BSD::NUMERIC, 44);
     assert_eq!(BSD::MINOR_UNIT, 2);
-    assert_eq!(BSD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(BSD::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(BSD::THOUSAND_SEPARATOR, ",");
     assert_eq!(BSD::DECIMAL_SEPARATOR, ".");
 }
@@ -295,7 +295,7 @@ fn test_bwp_currency() {
     assert_eq!(BWP::NAME, "Botswana pula");
     assert_eq!(BWP::NUMERIC, 72);
     assert_eq!(BWP::MINOR_UNIT, 2);
-    assert_eq!(BWP::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(BWP::MINOR_UNIT_SYMBOL, "t");
     assert_eq!(BWP::THOUSAND_SEPARATOR, ",");
     assert_eq!(BWP::DECIMAL_SEPARATOR, ".");
 }
@@ -307,7 +307,7 @@ fn test_byn_currency() {
     assert_eq!(BYN::NAME, "Belarusian ruble");
     assert_eq!(BYN::NUMERIC, 933);
     assert_eq!(BYN::MINOR_UNIT, 2);
-    assert_eq!(BYN::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(BYN::MINOR_UNIT_SYMBOL, "коп.");
     assert_eq!(BYN::THOUSAND_SEPARATOR, " ");
     assert_eq!(BYN::DECIMAL_SEPARATOR, ",");
 }
@@ -319,7 +319,7 @@ fn test_bzd_currency() {
     assert_eq!(BZD::NAME, "Belize dollar");
     assert_eq!(BZD::NUMERIC, 84);
     assert_eq!(BZD::MINOR_UNIT, 2);
-    assert_eq!(BZD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(BZD::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(BZD::THOUSAND_SEPARATOR, ",");
     assert_eq!(BZD::DECIMAL_SEPARATOR, ".");
 }
@@ -343,7 +343,7 @@ fn test_cdf_currency() {
     assert_eq!(CDF::NAME, "Congolese franc");
     assert_eq!(CDF::NUMERIC, 976);
     assert_eq!(CDF::MINOR_UNIT, 2);
-    assert_eq!(CDF::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(CDF::MINOR_UNIT_SYMBOL, "c");
     assert_eq!(CDF::THOUSAND_SEPARATOR, " ");
     assert_eq!(CDF::DECIMAL_SEPARATOR, ",");
 }
@@ -355,7 +355,7 @@ fn test_che_currency() {
     assert_eq!(CHE::NAME, "WIR Euro");
     assert_eq!(CHE::NUMERIC, 947);
     assert_eq!(CHE::MINOR_UNIT, 2);
-    assert_eq!(CHE::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(CHE::MINOR_UNIT_SYMBOL, "c");
     assert_eq!(CHE::THOUSAND_SEPARATOR, "'");
     assert_eq!(CHE::DECIMAL_SEPARATOR, ".");
 }
@@ -367,7 +367,7 @@ fn test_chf_currency() {
     assert_eq!(CHF::NAME, "Swiss franc");
     assert_eq!(CHF::NUMERIC, 756);
     assert_eq!(CHF::MINOR_UNIT, 2);
-    assert_eq!(CHF::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(CHF::MINOR_UNIT_SYMBOL, "c");
     assert_eq!(CHF::THOUSAND_SEPARATOR, "'");
     assert_eq!(CHF::DECIMAL_SEPARATOR, ".");
 }
@@ -379,7 +379,7 @@ fn test_chw_currency() {
     assert_eq!(CHW::NAME, "WIR Franc");
     assert_eq!(CHW::NUMERIC, 948);
     assert_eq!(CHW::MINOR_UNIT, 2);
-    assert_eq!(CHW::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(CHW::MINOR_UNIT_SYMBOL, "c");
     assert_eq!(CHW::THOUSAND_SEPARATOR, "'");
     assert_eq!(CHW::DECIMAL_SEPARATOR, ".");
 }
@@ -415,7 +415,7 @@ fn test_cny_currency() {
     assert_eq!(CNY::NAME, "Renminbi (Chinese) yuan");
     assert_eq!(CNY::NUMERIC, 156);
     assert_eq!(CNY::MINOR_UNIT, 2);
-    assert_eq!(CNY::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(CNY::MINOR_UNIT_SYMBOL, "分");
     assert_eq!(CNY::THOUSAND_SEPARATOR, ",");
     assert_eq!(CNY::DECIMAL_SEPARATOR, ".");
 }
@@ -427,7 +427,7 @@ fn test_cop_currency() {
     assert_eq!(COP::NAME, "Colombian peso");
     assert_eq!(COP::NUMERIC, 170);
     assert_eq!(COP::MINOR_UNIT, 2);
-    assert_eq!(COP::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(COP::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(COP::THOUSAND_SEPARATOR, ".");
     assert_eq!(COP::DECIMAL_SEPARATOR, ",");
 }
@@ -451,7 +451,7 @@ fn test_crc_currency() {
     assert_eq!(CRC::NAME, "Costa Rican colon");
     assert_eq!(CRC::NUMERIC, 188);
     assert_eq!(CRC::MINOR_UNIT, 2);
-    assert_eq!(CRC::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(CRC::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(CRC::THOUSAND_SEPARATOR, " ");
     assert_eq!(CRC::DECIMAL_SEPARATOR, ",");
 }
@@ -463,7 +463,7 @@ fn test_cuc_currency() {
     assert_eq!(CUC::NAME, "Cuban convertible peso");
     assert_eq!(CUC::NUMERIC, 931);
     assert_eq!(CUC::MINOR_UNIT, 2);
-    assert_eq!(CUC::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(CUC::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(CUC::THOUSAND_SEPARATOR, ",");
     assert_eq!(CUC::DECIMAL_SEPARATOR, ".");
 }
@@ -475,7 +475,7 @@ fn test_cup_currency() {
     assert_eq!(CUP::NAME, "Cuban peso");
     assert_eq!(CUP::NUMERIC, 192);
     assert_eq!(CUP::MINOR_UNIT, 2);
-    assert_eq!(CUP::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(CUP::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(CUP::THOUSAND_SEPARATOR, ",");
     assert_eq!(CUP::DECIMAL_SEPARATOR, ".");
 }
@@ -487,7 +487,7 @@ fn test_cve_currency() {
     assert_eq!(CVE::NAME, "Cape Verdean escudo");
     assert_eq!(CVE::NUMERIC, 132);
     assert_eq!(CVE::MINOR_UNIT, 2);
-    assert_eq!(CVE::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(CVE::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(CVE::THOUSAND_SEPARATOR, " ");
     assert_eq!(CVE::DECIMAL_SEPARATOR, ",");
 }
@@ -523,7 +523,7 @@ fn test_dkk_currency() {
     assert_eq!(DKK::NAME, "Danish krone");
     assert_eq!(DKK::NUMERIC, 208);
     assert_eq!(DKK::MINOR_UNIT, 2);
-    assert_eq!(DKK::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(DKK::MINOR_UNIT_SYMBOL, "øre");
     assert_eq!(DKK::THOUSAND_SEPARATOR, ".");
     assert_eq!(DKK::DECIMAL_SEPARATOR, ",");
 }
@@ -535,7 +535,7 @@ fn test_dop_currency() {
     assert_eq!(DOP::NAME, "Dominican peso");
     assert_eq!(DOP::NUMERIC, 214);
     assert_eq!(DOP::MINOR_UNIT, 2);
-    assert_eq!(DOP::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(DOP::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(DOP::THOUSAND_SEPARATOR, ",");
     assert_eq!(DOP::DECIMAL_SEPARATOR, ".");
 }
@@ -547,7 +547,7 @@ fn test_dzd_currency() {
     assert_eq!(DZD::NAME, "Algerian dinar");
     assert_eq!(DZD::NUMERIC, 12);
     assert_eq!(DZD::MINOR_UNIT, 2);
-    assert_eq!(DZD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(DZD::MINOR_UNIT_SYMBOL, "c");
     assert_eq!(DZD::THOUSAND_SEPARATOR, ".");
     assert_eq!(DZD::DECIMAL_SEPARATOR, ",");
 }
@@ -571,7 +571,7 @@ fn test_ern_currency() {
     assert_eq!(ERN::NAME, "Eritrean nakfa");
     assert_eq!(ERN::NUMERIC, 232);
     assert_eq!(ERN::MINOR_UNIT, 2);
-    assert_eq!(ERN::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(ERN::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(ERN::THOUSAND_SEPARATOR, ",");
     assert_eq!(ERN::DECIMAL_SEPARATOR, ".");
 }
@@ -583,7 +583,7 @@ fn test_etb_currency() {
     assert_eq!(ETB::NAME, "Ethiopian birr");
     assert_eq!(ETB::NUMERIC, 230);
     assert_eq!(ETB::MINOR_UNIT, 2);
-    assert_eq!(ETB::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(ETB::MINOR_UNIT_SYMBOL, "c");
     assert_eq!(ETB::THOUSAND_SEPARATOR, ",");
     assert_eq!(ETB::DECIMAL_SEPARATOR, ".");
 }
@@ -595,7 +595,7 @@ fn test_eur_currency() {
     assert_eq!(EUR::NAME, "Euro");
     assert_eq!(EUR::NUMERIC, 978);
     assert_eq!(EUR::MINOR_UNIT, 2);
-    assert_eq!(EUR::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(EUR::MINOR_UNIT_SYMBOL, "c");
     assert_eq!(EUR::THOUSAND_SEPARATOR, ".");
     assert_eq!(EUR::DECIMAL_SEPARATOR, ",");
 }
@@ -607,7 +607,7 @@ fn test_fjd_currency() {
     assert_eq!(FJD::NAME, "Fiji dollar");
     assert_eq!(FJD::NUMERIC, 242);
     assert_eq!(FJD::MINOR_UNIT, 2);
-    assert_eq!(FJD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(FJD::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(FJD::THOUSAND_SEPARATOR, ",");
     assert_eq!(FJD::DECIMAL_SEPARATOR, ".");
 }
@@ -619,7 +619,7 @@ fn test_fkp_currency() {
     assert_eq!(FKP::NAME, "Falkland Islands pound");
     assert_eq!(FKP::NUMERIC, 238);
     assert_eq!(FKP::MINOR_UNIT, 2);
-    assert_eq!(FKP::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(FKP::MINOR_UNIT_SYMBOL, "p");
     assert_eq!(FKP::THOUSAND_SEPARATOR, ",");
     assert_eq!(FKP::DECIMAL_SEPARATOR, ".");
 }
@@ -643,7 +643,7 @@ fn test_gel_currency() {
     assert_eq!(GEL::NAME, "Georgian lari");
     assert_eq!(GEL::NUMERIC, 981);
     assert_eq!(GEL::MINOR_UNIT, 2);
-    assert_eq!(GEL::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(GEL::MINOR_UNIT_SYMBOL, "₮");
     assert_eq!(GEL::THOUSAND_SEPARATOR, " ");
     assert_eq!(GEL::DECIMAL_SEPARATOR, ",");
 }
@@ -655,7 +655,7 @@ fn test_ghs_currency() {
     assert_eq!(GHS::NAME, "Ghanaian cedi");
     assert_eq!(GHS::NUMERIC, 936);
     assert_eq!(GHS::MINOR_UNIT, 2);
-    assert_eq!(GHS::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(GHS::MINOR_UNIT_SYMBOL, "Gp");
     assert_eq!(GHS::THOUSAND_SEPARATOR, ",");
     assert_eq!(GHS::DECIMAL_SEPARATOR, ".");
 }
@@ -667,7 +667,7 @@ fn test_gip_currency() {
     assert_eq!(GIP::NAME, "Gibraltar pound");
     assert_eq!(GIP::NUMERIC, 292);
     assert_eq!(GIP::MINOR_UNIT, 2);
-    assert_eq!(GIP::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(GIP::MINOR_UNIT_SYMBOL, "p");
     assert_eq!(GIP::THOUSAND_SEPARATOR, ",");
     assert_eq!(GIP::DECIMAL_SEPARATOR, ".");
 }
@@ -679,7 +679,7 @@ fn test_gmd_currency() {
     assert_eq!(GMD::NAME, "Gambian dalasi");
     assert_eq!(GMD::NUMERIC, 270);
     assert_eq!(GMD::MINOR_UNIT, 2);
-    assert_eq!(GMD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(GMD::MINOR_UNIT_SYMBOL, "b");
     assert_eq!(GMD::THOUSAND_SEPARATOR, ",");
     assert_eq!(GMD::DECIMAL_SEPARATOR, ".");
 }
@@ -703,7 +703,7 @@ fn test_gtq_currency() {
     assert_eq!(GTQ::NAME, "Guatemalan quetzal");
     assert_eq!(GTQ::NUMERIC, 320);
     assert_eq!(GTQ::MINOR_UNIT, 2);
-    assert_eq!(GTQ::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(GTQ::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(GTQ::THOUSAND_SEPARATOR, ",");
     assert_eq!(GTQ::DECIMAL_SEPARATOR, ".");
 }
@@ -715,7 +715,7 @@ fn test_gyd_currency() {
     assert_eq!(GYD::NAME, "Guyanese dollar");
     assert_eq!(GYD::NUMERIC, 328);
     assert_eq!(GYD::MINOR_UNIT, 2);
-    assert_eq!(GYD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(GYD::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(GYD::THOUSAND_SEPARATOR, ",");
     assert_eq!(GYD::DECIMAL_SEPARATOR, ".");
 }
@@ -727,7 +727,7 @@ fn test_hkd_currency() {
     assert_eq!(HKD::NAME, "Hong Kong dollar");
     assert_eq!(HKD::NUMERIC, 344);
     assert_eq!(HKD::MINOR_UNIT, 2);
-    assert_eq!(HKD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(HKD::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(HKD::THOUSAND_SEPARATOR, ",");
     assert_eq!(HKD::DECIMAL_SEPARATOR, ".");
 }
@@ -739,7 +739,7 @@ fn test_hnl_currency() {
     assert_eq!(HNL::NAME, "Honduran lempira");
     assert_eq!(HNL::NUMERIC, 340);
     assert_eq!(HNL::MINOR_UNIT, 2);
-    assert_eq!(HNL::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(HNL::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(HNL::THOUSAND_SEPARATOR, ",");
     assert_eq!(HNL::DECIMAL_SEPARATOR, ".");
 }
@@ -763,7 +763,7 @@ fn test_htg_currency() {
     assert_eq!(HTG::NAME, "Haitian gourde");
     assert_eq!(HTG::NUMERIC, 332);
     assert_eq!(HTG::MINOR_UNIT, 2);
-    assert_eq!(HTG::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(HTG::MINOR_UNIT_SYMBOL, "c");
     assert_eq!(HTG::THOUSAND_SEPARATOR, " ");
     assert_eq!(HTG::DECIMAL_SEPARATOR, ",");
 }
@@ -775,7 +775,7 @@ fn test_huf_currency() {
     assert_eq!(HUF::NAME, "Hungarian forint");
     assert_eq!(HUF::NUMERIC, 348);
     assert_eq!(HUF::MINOR_UNIT, 2);
-    assert_eq!(HUF::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(HUF::MINOR_UNIT_SYMBOL, "f");
     assert_eq!(HUF::THOUSAND_SEPARATOR, " ");
     assert_eq!(HUF::DECIMAL_SEPARATOR, ",");
 }
@@ -787,7 +787,7 @@ fn test_idr_currency() {
     assert_eq!(IDR::NAME, "Indonesian rupiah");
     assert_eq!(IDR::NUMERIC, 360);
     assert_eq!(IDR::MINOR_UNIT, 2);
-    assert_eq!(IDR::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(IDR::MINOR_UNIT_SYMBOL, "sen");
     assert_eq!(IDR::THOUSAND_SEPARATOR, ".");
     assert_eq!(IDR::DECIMAL_SEPARATOR, ",");
 }
@@ -799,7 +799,7 @@ fn test_ils_currency() {
     assert_eq!(ILS::NAME, "Israeli new shekel");
     assert_eq!(ILS::NUMERIC, 376);
     assert_eq!(ILS::MINOR_UNIT, 2);
-    assert_eq!(ILS::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(ILS::MINOR_UNIT_SYMBOL, "ag.");
     assert_eq!(ILS::THOUSAND_SEPARATOR, ",");
     assert_eq!(ILS::DECIMAL_SEPARATOR, ".");
 }
@@ -811,7 +811,7 @@ fn test_inr_currency() {
     assert_eq!(INR::NAME, "Indian rupee");
     assert_eq!(INR::NUMERIC, 356);
     assert_eq!(INR::MINOR_UNIT, 2);
-    assert_eq!(INR::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(INR::MINOR_UNIT_SYMBOL, "p");
     assert_eq!(INR::THOUSAND_SEPARATOR, ",");
     assert_eq!(INR::DECIMAL_SEPARATOR, ".");
 }
@@ -823,7 +823,7 @@ fn test_iqd_currency() {
     assert_eq!(IQD::NAME, "Iraqi dinar");
     assert_eq!(IQD::NUMERIC, 368);
     assert_eq!(IQD::MINOR_UNIT, 3);
-    assert_eq!(IQD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(IQD::MINOR_UNIT_SYMBOL, "فلس");
     assert_eq!(IQD::THOUSAND_SEPARATOR, "٬");
     assert_eq!(IQD::DECIMAL_SEPARATOR, "٫");
 }
@@ -859,7 +859,7 @@ fn test_jmd_currency() {
     assert_eq!(JMD::NAME, "Jamaican dollar");
     assert_eq!(JMD::NUMERIC, 388);
     assert_eq!(JMD::MINOR_UNIT, 2);
-    assert_eq!(JMD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(JMD::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(JMD::THOUSAND_SEPARATOR, ",");
     assert_eq!(JMD::DECIMAL_SEPARATOR, ".");
 }
@@ -871,7 +871,7 @@ fn test_jod_currency() {
     assert_eq!(JOD::NAME, "Jordanian dinar");
     assert_eq!(JOD::NUMERIC, 400);
     assert_eq!(JOD::MINOR_UNIT, 3);
-    assert_eq!(JOD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(JOD::MINOR_UNIT_SYMBOL, "فلس");
     assert_eq!(JOD::THOUSAND_SEPARATOR, "٬");
     assert_eq!(JOD::DECIMAL_SEPARATOR, "٫");
 }
@@ -895,7 +895,7 @@ fn test_kes_currency() {
     assert_eq!(KES::NAME, "Kenyan shilling");
     assert_eq!(KES::NUMERIC, 404);
     assert_eq!(KES::MINOR_UNIT, 2);
-    assert_eq!(KES::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(KES::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(KES::THOUSAND_SEPARATOR, ",");
     assert_eq!(KES::DECIMAL_SEPARATOR, ".");
 }
@@ -907,7 +907,7 @@ fn test_kgs_currency() {
     assert_eq!(KGS::NAME, "Kyrgyzstani som");
     assert_eq!(KGS::NUMERIC, 417);
     assert_eq!(KGS::MINOR_UNIT, 2);
-    assert_eq!(KGS::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(KGS::MINOR_UNIT_SYMBOL, "тыйын");
     assert_eq!(KGS::THOUSAND_SEPARATOR, " ");
     assert_eq!(KGS::DECIMAL_SEPARATOR, ",");
 }
@@ -919,7 +919,7 @@ fn test_khr_currency() {
     assert_eq!(KHR::NAME, "Cambodian riel");
     assert_eq!(KHR::NUMERIC, 116);
     assert_eq!(KHR::MINOR_UNIT, 2);
-    assert_eq!(KHR::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(KHR::MINOR_UNIT_SYMBOL, "sen");
     assert_eq!(KHR::THOUSAND_SEPARATOR, ",");
     assert_eq!(KHR::DECIMAL_SEPARATOR, ".");
 }
@@ -943,7 +943,7 @@ fn test_kpw_currency() {
     assert_eq!(KPW::NAME, "North Korean won");
     assert_eq!(KPW::NUMERIC, 408);
     assert_eq!(KPW::MINOR_UNIT, 2);
-    assert_eq!(KPW::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(KPW::MINOR_UNIT_SYMBOL, "전");
     assert_eq!(KPW::THOUSAND_SEPARATOR, ",");
     assert_eq!(KPW::DECIMAL_SEPARATOR, ".");
 }
@@ -967,7 +967,7 @@ fn test_kwd_currency() {
     assert_eq!(KWD::NAME, "Kuwaiti dinar");
     assert_eq!(KWD::NUMERIC, 414);
     assert_eq!(KWD::MINOR_UNIT, 3);
-    assert_eq!(KWD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(KWD::MINOR_UNIT_SYMBOL, "فلس");
     assert_eq!(KWD::THOUSAND_SEPARATOR, "٬");
     assert_eq!(KWD::DECIMAL_SEPARATOR, "٫");
 }
@@ -979,7 +979,7 @@ fn test_kyd_currency() {
     assert_eq!(KYD::NAME, "Cayman Islands dollar");
     assert_eq!(KYD::NUMERIC, 136);
     assert_eq!(KYD::MINOR_UNIT, 2);
-    assert_eq!(KYD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(KYD::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(KYD::THOUSAND_SEPARATOR, ",");
     assert_eq!(KYD::DECIMAL_SEPARATOR, ".");
 }
@@ -991,7 +991,7 @@ fn test_kzt_currency() {
     assert_eq!(KZT::NAME, "Kazakhstani tenge");
     assert_eq!(KZT::NUMERIC, 398);
     assert_eq!(KZT::MINOR_UNIT, 2);
-    assert_eq!(KZT::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(KZT::MINOR_UNIT_SYMBOL, "тиын");
     assert_eq!(KZT::THOUSAND_SEPARATOR, " ");
     assert_eq!(KZT::DECIMAL_SEPARATOR, ",");
 }
@@ -1003,7 +1003,7 @@ fn test_lak_currency() {
     assert_eq!(LAK::NAME, "Lao kip");
     assert_eq!(LAK::NUMERIC, 418);
     assert_eq!(LAK::MINOR_UNIT, 2);
-    assert_eq!(LAK::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(LAK::MINOR_UNIT_SYMBOL, "att");
     assert_eq!(LAK::THOUSAND_SEPARATOR, ".");
     assert_eq!(LAK::DECIMAL_SEPARATOR, ",");
 }
@@ -1027,7 +1027,7 @@ fn test_lkr_currency() {
     assert_eq!(LKR::NAME, "Sri Lankan rupee");
     assert_eq!(LKR::NUMERIC, 144);
     assert_eq!(LKR::MINOR_UNIT, 2);
-    assert_eq!(LKR::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(LKR::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(LKR::THOUSAND_SEPARATOR, ",");
     assert_eq!(LKR::DECIMAL_SEPARATOR, ".");
 }
@@ -1039,7 +1039,7 @@ fn test_lrd_currency() {
     assert_eq!(LRD::NAME, "Liberian dollar");
     assert_eq!(LRD::NUMERIC, 430);
     assert_eq!(LRD::MINOR_UNIT, 2);
-    assert_eq!(LRD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(LRD::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(LRD::THOUSAND_SEPARATOR, ",");
     assert_eq!(LRD::DECIMAL_SEPARATOR, ".");
 }
@@ -1051,7 +1051,7 @@ fn test_lsl_currency() {
     assert_eq!(LSL::NAME, "Lesotho loti");
     assert_eq!(LSL::NUMERIC, 426);
     assert_eq!(LSL::MINOR_UNIT, 2);
-    assert_eq!(LSL::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(LSL::MINOR_UNIT_SYMBOL, "s");
     assert_eq!(LSL::THOUSAND_SEPARATOR, ",");
     assert_eq!(LSL::DECIMAL_SEPARATOR, ".");
 }
@@ -1063,7 +1063,7 @@ fn test_lyd_currency() {
     assert_eq!(LYD::NAME, "Libyan dinar");
     assert_eq!(LYD::NUMERIC, 434);
     assert_eq!(LYD::MINOR_UNIT, 3);
-    assert_eq!(LYD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(LYD::MINOR_UNIT_SYMBOL, "د");
     assert_eq!(LYD::THOUSAND_SEPARATOR, ".");
     assert_eq!(LYD::DECIMAL_SEPARATOR, ",");
 }
@@ -1075,7 +1075,7 @@ fn test_mad_currency() {
     assert_eq!(MAD::NAME, "Moroccan dirham");
     assert_eq!(MAD::NUMERIC, 504);
     assert_eq!(MAD::MINOR_UNIT, 2);
-    assert_eq!(MAD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(MAD::MINOR_UNIT_SYMBOL, "c");
     assert_eq!(MAD::THOUSAND_SEPARATOR, ".");
     assert_eq!(MAD::DECIMAL_SEPARATOR, ",");
 }
@@ -1087,7 +1087,7 @@ fn test_mdl_currency() {
     assert_eq!(MDL::NAME, "Moldovan leu");
     assert_eq!(MDL::NUMERIC, 498);
     assert_eq!(MDL::MINOR_UNIT, 2);
-    assert_eq!(MDL::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(MDL::MINOR_UNIT_SYMBOL, "b");
     assert_eq!(MDL::THOUSAND_SEPARATOR, ".");
     assert_eq!(MDL::DECIMAL_SEPARATOR, ",");
 }
@@ -1099,7 +1099,7 @@ fn test_mga_currency() {
     assert_eq!(MGA::NAME, "Malagasy ariary");
     assert_eq!(MGA::NUMERIC, 969);
     assert_eq!(MGA::MINOR_UNIT, 2);
-    assert_eq!(MGA::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(MGA::MINOR_UNIT_SYMBOL, "Fy");
     assert_eq!(MGA::THOUSAND_SEPARATOR, ",");
     assert_eq!(MGA::DECIMAL_SEPARATOR, ".");
 }
@@ -1111,7 +1111,7 @@ fn test_mkd_currency() {
     assert_eq!(MKD::NAME, "Macedonian denar");
     assert_eq!(MKD::NUMERIC, 807);
     assert_eq!(MKD::MINOR_UNIT, 2);
-    assert_eq!(MKD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(MKD::MINOR_UNIT_SYMBOL, "ден");
     assert_eq!(MKD::THOUSAND_SEPARATOR, ".");
     assert_eq!(MKD::DECIMAL_SEPARATOR, ",");
 }
@@ -1123,7 +1123,7 @@ fn test_mmk_currency() {
     assert_eq!(MMK::NAME, "Myanmar kyat");
     assert_eq!(MMK::NUMERIC, 104);
     assert_eq!(MMK::MINOR_UNIT, 2);
-    assert_eq!(MMK::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(MMK::MINOR_UNIT_SYMBOL, "pya");
     assert_eq!(MMK::THOUSAND_SEPARATOR, ",");
     assert_eq!(MMK::DECIMAL_SEPARATOR, ".");
 }
@@ -1135,7 +1135,7 @@ fn test_mnt_currency() {
     assert_eq!(MNT::NAME, "Mongolian tögrög");
     assert_eq!(MNT::NUMERIC, 496);
     assert_eq!(MNT::MINOR_UNIT, 2);
-    assert_eq!(MNT::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(MNT::MINOR_UNIT_SYMBOL, "₮");
     assert_eq!(MNT::THOUSAND_SEPARATOR, ",");
     assert_eq!(MNT::DECIMAL_SEPARATOR, ".");
 }
@@ -1147,7 +1147,7 @@ fn test_mop_currency() {
     assert_eq!(MOP::NAME, "Macanese pataca");
     assert_eq!(MOP::NUMERIC, 446);
     assert_eq!(MOP::MINOR_UNIT, 2);
-    assert_eq!(MOP::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(MOP::MINOR_UNIT_SYMBOL, "avo");
     assert_eq!(MOP::THOUSAND_SEPARATOR, ",");
     assert_eq!(MOP::DECIMAL_SEPARATOR, ".");
 }
@@ -1159,7 +1159,7 @@ fn test_mru_currency() {
     assert_eq!(MRU::NAME, "Mauritanian ouguiya");
     assert_eq!(MRU::NUMERIC, 929);
     assert_eq!(MRU::MINOR_UNIT, 2);
-    assert_eq!(MRU::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(MRU::MINOR_UNIT_SYMBOL, "خ");
     assert_eq!(MRU::THOUSAND_SEPARATOR, "٬");
     assert_eq!(MRU::DECIMAL_SEPARATOR, "٫");
 }
@@ -1171,7 +1171,7 @@ fn test_mur_currency() {
     assert_eq!(MUR::NAME, "Mauritian rupee");
     assert_eq!(MUR::NUMERIC, 480);
     assert_eq!(MUR::MINOR_UNIT, 2);
-    assert_eq!(MUR::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(MUR::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(MUR::THOUSAND_SEPARATOR, ",");
     assert_eq!(MUR::DECIMAL_SEPARATOR, ".");
 }
@@ -1183,7 +1183,7 @@ fn test_mvr_currency() {
     assert_eq!(MVR::NAME, "Maldivian rufiyaa");
     assert_eq!(MVR::NUMERIC, 462);
     assert_eq!(MVR::MINOR_UNIT, 2);
-    assert_eq!(MVR::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(MVR::MINOR_UNIT_SYMBOL, "ލ");
     assert_eq!(MVR::THOUSAND_SEPARATOR, ",");
     assert_eq!(MVR::DECIMAL_SEPARATOR, ".");
 }
@@ -1195,7 +1195,7 @@ fn test_mwk_currency() {
     assert_eq!(MWK::NAME, "Malawian kwacha");
     assert_eq!(MWK::NUMERIC, 454);
     assert_eq!(MWK::MINOR_UNIT, 2);
-    assert_eq!(MWK::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(MWK::MINOR_UNIT_SYMBOL, "t");
     assert_eq!(MWK::THOUSAND_SEPARATOR, ",");
     assert_eq!(MWK::DECIMAL_SEPARATOR, ".");
 }
@@ -1231,7 +1231,7 @@ fn test_myr_currency() {
     assert_eq!(MYR::NAME, "Malaysian ringgit");
     assert_eq!(MYR::NUMERIC, 458);
     assert_eq!(MYR::MINOR_UNIT, 2);
-    assert_eq!(MYR::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(MYR::MINOR_UNIT_SYMBOL, "sen");
     assert_eq!(MYR::THOUSAND_SEPARATOR, ",");
     assert_eq!(MYR::DECIMAL_SEPARATOR, ".");
 }
@@ -1243,7 +1243,7 @@ fn test_mzn_currency() {
     assert_eq!(MZN::NAME, "Mozambican metical");
     assert_eq!(MZN::NUMERIC, 943);
     assert_eq!(MZN::MINOR_UNIT, 2);
-    assert_eq!(MZN::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(MZN::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(MZN::THOUSAND_SEPARATOR, " ");
     assert_eq!(MZN::DECIMAL_SEPARATOR, ",");
 }
@@ -1267,7 +1267,7 @@ fn test_ngn_currency() {
     assert_eq!(NGN::NAME, "Nigerian naira");
     assert_eq!(NGN::NUMERIC, 566);
     assert_eq!(NGN::MINOR_UNIT, 2);
-    assert_eq!(NGN::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(NGN::MINOR_UNIT_SYMBOL, "k");
     assert_eq!(NGN::THOUSAND_SEPARATOR, ",");
     assert_eq!(NGN::DECIMAL_SEPARATOR, ".");
 }
@@ -1279,7 +1279,7 @@ fn test_nio_currency() {
     assert_eq!(NIO::NAME, "Nicaraguan córdoba");
     assert_eq!(NIO::NUMERIC, 558);
     assert_eq!(NIO::MINOR_UNIT, 2);
-    assert_eq!(NIO::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(NIO::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(NIO::THOUSAND_SEPARATOR, ",");
     assert_eq!(NIO::DECIMAL_SEPARATOR, ".");
 }
@@ -1291,7 +1291,7 @@ fn test_nok_currency() {
     assert_eq!(NOK::NAME, "Norwegian krone");
     assert_eq!(NOK::NUMERIC, 578);
     assert_eq!(NOK::MINOR_UNIT, 2);
-    assert_eq!(NOK::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(NOK::MINOR_UNIT_SYMBOL, "øre");
     assert_eq!(NOK::THOUSAND_SEPARATOR, " ");
     assert_eq!(NOK::DECIMAL_SEPARATOR, ",");
 }
@@ -1303,7 +1303,7 @@ fn test_npr_currency() {
     assert_eq!(NPR::NAME, "Nepalese rupee");
     assert_eq!(NPR::NUMERIC, 524);
     assert_eq!(NPR::MINOR_UNIT, 2);
-    assert_eq!(NPR::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(NPR::MINOR_UNIT_SYMBOL, "p");
     assert_eq!(NPR::THOUSAND_SEPARATOR, ",");
     assert_eq!(NPR::DECIMAL_SEPARATOR, ".");
 }
@@ -1327,7 +1327,7 @@ fn test_omr_currency() {
     assert_eq!(OMR::NAME, "Omani rial");
     assert_eq!(OMR::NUMERIC, 512);
     assert_eq!(OMR::MINOR_UNIT, 3);
-    assert_eq!(OMR::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(OMR::MINOR_UNIT_SYMBOL, "ب.ع");
     assert_eq!(OMR::THOUSAND_SEPARATOR, "٬");
     assert_eq!(OMR::DECIMAL_SEPARATOR, "٫");
 }
@@ -1339,7 +1339,7 @@ fn test_pab_currency() {
     assert_eq!(PAB::NAME, "Panamanian balboa");
     assert_eq!(PAB::NUMERIC, 590);
     assert_eq!(PAB::MINOR_UNIT, 2);
-    assert_eq!(PAB::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(PAB::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(PAB::THOUSAND_SEPARATOR, ",");
     assert_eq!(PAB::DECIMAL_SEPARATOR, ".");
 }
@@ -1351,7 +1351,7 @@ fn test_pen_currency() {
     assert_eq!(PEN::NAME, "Peruvian sol");
     assert_eq!(PEN::NUMERIC, 604);
     assert_eq!(PEN::MINOR_UNIT, 2);
-    assert_eq!(PEN::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(PEN::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(PEN::THOUSAND_SEPARATOR, ",");
     assert_eq!(PEN::DECIMAL_SEPARATOR, ".");
 }
@@ -1363,7 +1363,7 @@ fn test_pgk_currency() {
     assert_eq!(PGK::NAME, "Papua New Guinean kina");
     assert_eq!(PGK::NUMERIC, 598);
     assert_eq!(PGK::MINOR_UNIT, 2);
-    assert_eq!(PGK::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(PGK::MINOR_UNIT_SYMBOL, "t");
     assert_eq!(PGK::THOUSAND_SEPARATOR, ",");
     assert_eq!(PGK::DECIMAL_SEPARATOR, ".");
 }
@@ -1375,7 +1375,7 @@ fn test_php_currency() {
     assert_eq!(PHP::NAME, "Philippine peso");
     assert_eq!(PHP::NUMERIC, 608);
     assert_eq!(PHP::MINOR_UNIT, 2);
-    assert_eq!(PHP::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(PHP::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(PHP::THOUSAND_SEPARATOR, ",");
     assert_eq!(PHP::DECIMAL_SEPARATOR, ".");
 }
@@ -1387,7 +1387,7 @@ fn test_pkr_currency() {
     assert_eq!(PKR::NAME, "Pakistani rupee");
     assert_eq!(PKR::NUMERIC, 586);
     assert_eq!(PKR::MINOR_UNIT, 2);
-    assert_eq!(PKR::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(PKR::MINOR_UNIT_SYMBOL, "p");
     assert_eq!(PKR::THOUSAND_SEPARATOR, ",");
     assert_eq!(PKR::DECIMAL_SEPARATOR, ".");
 }
@@ -1423,7 +1423,7 @@ fn test_qar_currency() {
     assert_eq!(QAR::NAME, "Qatari riyal");
     assert_eq!(QAR::NUMERIC, 634);
     assert_eq!(QAR::MINOR_UNIT, 2);
-    assert_eq!(QAR::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(QAR::MINOR_UNIT_SYMBOL, "د.ق");
     assert_eq!(QAR::THOUSAND_SEPARATOR, "٬");
     assert_eq!(QAR::DECIMAL_SEPARATOR, "٫");
 }
@@ -1435,7 +1435,7 @@ fn test_ron_currency() {
     assert_eq!(RON::NAME, "Romanian leu");
     assert_eq!(RON::NUMERIC, 946);
     assert_eq!(RON::MINOR_UNIT, 2);
-    assert_eq!(RON::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(RON::MINOR_UNIT_SYMBOL, "b");
     assert_eq!(RON::THOUSAND_SEPARATOR, ".");
     assert_eq!(RON::DECIMAL_SEPARATOR, ",");
 }
@@ -1447,7 +1447,7 @@ fn test_rsd_currency() {
     assert_eq!(RSD::NAME, "Serbian dinar");
     assert_eq!(RSD::NUMERIC, 941);
     assert_eq!(RSD::MINOR_UNIT, 2);
-    assert_eq!(RSD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(RSD::MINOR_UNIT_SYMBOL, "пар.");
     assert_eq!(RSD::THOUSAND_SEPARATOR, ".");
     assert_eq!(RSD::DECIMAL_SEPARATOR, ",");
 }
@@ -1459,7 +1459,7 @@ fn test_rub_currency() {
     assert_eq!(RUB::NAME, "Russian ruble");
     assert_eq!(RUB::NUMERIC, 643);
     assert_eq!(RUB::MINOR_UNIT, 2);
-    assert_eq!(RUB::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(RUB::MINOR_UNIT_SYMBOL, "коп.");
     assert_eq!(RUB::THOUSAND_SEPARATOR, " ");
     assert_eq!(RUB::DECIMAL_SEPARATOR, ",");
 }
@@ -1483,7 +1483,7 @@ fn test_sar_currency() {
     assert_eq!(SAR::NAME, "Saudi riyal");
     assert_eq!(SAR::NUMERIC, 682);
     assert_eq!(SAR::MINOR_UNIT, 2);
-    assert_eq!(SAR::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(SAR::MINOR_UNIT_SYMBOL, "هللة");
     assert_eq!(SAR::THOUSAND_SEPARATOR, "٬");
     assert_eq!(SAR::DECIMAL_SEPARATOR, "٫");
 }
@@ -1495,7 +1495,7 @@ fn test_sbd_currency() {
     assert_eq!(SBD::NAME, "Solomon Islands dollar");
     assert_eq!(SBD::NUMERIC, 90);
     assert_eq!(SBD::MINOR_UNIT, 2);
-    assert_eq!(SBD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(SBD::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(SBD::THOUSAND_SEPARATOR, ",");
     assert_eq!(SBD::DECIMAL_SEPARATOR, ".");
 }
@@ -1507,7 +1507,7 @@ fn test_scr_currency() {
     assert_eq!(SCR::NAME, "Seychelles rupee");
     assert_eq!(SCR::NUMERIC, 690);
     assert_eq!(SCR::MINOR_UNIT, 2);
-    assert_eq!(SCR::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(SCR::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(SCR::THOUSAND_SEPARATOR, ",");
     assert_eq!(SCR::DECIMAL_SEPARATOR, ".");
 }
@@ -1519,7 +1519,7 @@ fn test_sdg_currency() {
     assert_eq!(SDG::NAME, "Sudanese pound");
     assert_eq!(SDG::NUMERIC, 938);
     assert_eq!(SDG::MINOR_UNIT, 2);
-    assert_eq!(SDG::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(SDG::MINOR_UNIT_SYMBOL, "قرش");
     assert_eq!(SDG::THOUSAND_SEPARATOR, "٬");
     assert_eq!(SDG::DECIMAL_SEPARATOR, "٫");
 }
@@ -1531,7 +1531,7 @@ fn test_sek_currency() {
     assert_eq!(SEK::NAME, "Swedish krona/kronor");
     assert_eq!(SEK::NUMERIC, 752);
     assert_eq!(SEK::MINOR_UNIT, 2);
-    assert_eq!(SEK::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(SEK::MINOR_UNIT_SYMBOL, "öre");
     assert_eq!(SEK::THOUSAND_SEPARATOR, " ");
     assert_eq!(SEK::DECIMAL_SEPARATOR, ",");
 }
@@ -1543,7 +1543,7 @@ fn test_sgd_currency() {
     assert_eq!(SGD::NAME, "Singapore dollar");
     assert_eq!(SGD::NUMERIC, 702);
     assert_eq!(SGD::MINOR_UNIT, 2);
-    assert_eq!(SGD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(SGD::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(SGD::THOUSAND_SEPARATOR, ",");
     assert_eq!(SGD::DECIMAL_SEPARATOR, ".");
 }
@@ -1555,7 +1555,7 @@ fn test_shp_currency() {
     assert_eq!(SHP::NAME, "Saint Helena pound");
     assert_eq!(SHP::NUMERIC, 654);
     assert_eq!(SHP::MINOR_UNIT, 2);
-    assert_eq!(SHP::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(SHP::MINOR_UNIT_SYMBOL, "p");
     assert_eq!(SHP::THOUSAND_SEPARATOR, ",");
     assert_eq!(SHP::DECIMAL_SEPARATOR, ".");
 }
@@ -1567,7 +1567,7 @@ fn test_sle_currency() {
     assert_eq!(SLE::NAME, "Sierra Leonean leone");
     assert_eq!(SLE::NUMERIC, 925);
     assert_eq!(SLE::MINOR_UNIT, 2);
-    assert_eq!(SLE::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(SLE::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(SLE::THOUSAND_SEPARATOR, ",");
     assert_eq!(SLE::DECIMAL_SEPARATOR, ".");
 }
@@ -1579,7 +1579,7 @@ fn test_sll_currency() {
     assert_eq!(SLL::NAME, "Sierra Leonean leone");
     assert_eq!(SLL::NUMERIC, 694);
     assert_eq!(SLL::MINOR_UNIT, 2);
-    assert_eq!(SLL::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(SLL::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(SLL::THOUSAND_SEPARATOR, ",");
     assert_eq!(SLL::DECIMAL_SEPARATOR, ".");
 }
@@ -1591,7 +1591,7 @@ fn test_sos_currency() {
     assert_eq!(SOS::NAME, "Somali shilling");
     assert_eq!(SOS::NUMERIC, 706);
     assert_eq!(SOS::MINOR_UNIT, 2);
-    assert_eq!(SOS::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(SOS::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(SOS::THOUSAND_SEPARATOR, ",");
     assert_eq!(SOS::DECIMAL_SEPARATOR, ".");
 }
@@ -1603,7 +1603,7 @@ fn test_srd_currency() {
     assert_eq!(SRD::NAME, "Surinamese dollar");
     assert_eq!(SRD::NUMERIC, 968);
     assert_eq!(SRD::MINOR_UNIT, 2);
-    assert_eq!(SRD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(SRD::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(SRD::THOUSAND_SEPARATOR, ".");
     assert_eq!(SRD::DECIMAL_SEPARATOR, ",");
 }
@@ -1615,7 +1615,7 @@ fn test_ssp_currency() {
     assert_eq!(SSP::NAME, "South Sudanese pound");
     assert_eq!(SSP::NUMERIC, 728);
     assert_eq!(SSP::MINOR_UNIT, 2);
-    assert_eq!(SSP::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(SSP::MINOR_UNIT_SYMBOL, "pt");
     assert_eq!(SSP::THOUSAND_SEPARATOR, ",");
     assert_eq!(SSP::DECIMAL_SEPARATOR, ".");
 }
@@ -1627,7 +1627,7 @@ fn test_stn_currency() {
     assert_eq!(STN::NAME, "São Tomé and Príncipe dobra");
     assert_eq!(STN::NUMERIC, 930);
     assert_eq!(STN::MINOR_UNIT, 2);
-    assert_eq!(STN::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(STN::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(STN::THOUSAND_SEPARATOR, " ");
     assert_eq!(STN::DECIMAL_SEPARATOR, ",");
 }
@@ -1639,7 +1639,7 @@ fn test_svc_currency() {
     assert_eq!(SVC::NAME, "Salvadoran colón");
     assert_eq!(SVC::NUMERIC, 222);
     assert_eq!(SVC::MINOR_UNIT, 2);
-    assert_eq!(SVC::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(SVC::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(SVC::THOUSAND_SEPARATOR, ",");
     assert_eq!(SVC::DECIMAL_SEPARATOR, ".");
 }
@@ -1651,7 +1651,7 @@ fn test_syp_currency() {
     assert_eq!(SYP::NAME, "Syrian pound");
     assert_eq!(SYP::NUMERIC, 760);
     assert_eq!(SYP::MINOR_UNIT, 2);
-    assert_eq!(SYP::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(SYP::MINOR_UNIT_SYMBOL, "قرش");
     assert_eq!(SYP::THOUSAND_SEPARATOR, "٬");
     assert_eq!(SYP::DECIMAL_SEPARATOR, "٫");
 }
@@ -1663,7 +1663,7 @@ fn test_szl_currency() {
     assert_eq!(SZL::NAME, "Swazi lilangeni");
     assert_eq!(SZL::NUMERIC, 748);
     assert_eq!(SZL::MINOR_UNIT, 2);
-    assert_eq!(SZL::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(SZL::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(SZL::THOUSAND_SEPARATOR, ",");
     assert_eq!(SZL::DECIMAL_SEPARATOR, ".");
 }
@@ -1675,7 +1675,7 @@ fn test_thb_currency() {
     assert_eq!(THB::NAME, "Thai baht");
     assert_eq!(THB::NUMERIC, 764);
     assert_eq!(THB::MINOR_UNIT, 2);
-    assert_eq!(THB::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(THB::MINOR_UNIT_SYMBOL, "สต.");
     assert_eq!(THB::THOUSAND_SEPARATOR, ",");
     assert_eq!(THB::DECIMAL_SEPARATOR, ".");
 }
@@ -1687,7 +1687,7 @@ fn test_tjs_currency() {
     assert_eq!(TJS::NAME, "Tajikistani somoni");
     assert_eq!(TJS::NUMERIC, 972);
     assert_eq!(TJS::MINOR_UNIT, 2);
-    assert_eq!(TJS::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(TJS::MINOR_UNIT_SYMBOL, "д");
     assert_eq!(TJS::THOUSAND_SEPARATOR, " ");
     assert_eq!(TJS::DECIMAL_SEPARATOR, ",");
 }
@@ -1699,7 +1699,7 @@ fn test_tmt_currency() {
     assert_eq!(TMT::NAME, "Turkmenistan manat");
     assert_eq!(TMT::NUMERIC, 934);
     assert_eq!(TMT::MINOR_UNIT, 2);
-    assert_eq!(TMT::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(TMT::MINOR_UNIT_SYMBOL, "t");
     assert_eq!(TMT::THOUSAND_SEPARATOR, " ");
     assert_eq!(TMT::DECIMAL_SEPARATOR, ",");
 }
@@ -1711,7 +1711,7 @@ fn test_tnd_currency() {
     assert_eq!(TND::NAME, "Tunisian dinar");
     assert_eq!(TND::NUMERIC, 788);
     assert_eq!(TND::MINOR_UNIT, 3);
-    assert_eq!(TND::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(TND::MINOR_UNIT_SYMBOL, "m");
     assert_eq!(TND::THOUSAND_SEPARATOR, ".");
     assert_eq!(TND::DECIMAL_SEPARATOR, ",");
 }
@@ -1723,7 +1723,7 @@ fn test_top_currency() {
     assert_eq!(TOP::NAME, "Tongan paʻanga");
     assert_eq!(TOP::NUMERIC, 776);
     assert_eq!(TOP::MINOR_UNIT, 2);
-    assert_eq!(TOP::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(TOP::MINOR_UNIT_SYMBOL, "s");
     assert_eq!(TOP::THOUSAND_SEPARATOR, ",");
     assert_eq!(TOP::DECIMAL_SEPARATOR, ".");
 }
@@ -1735,7 +1735,7 @@ fn test_try_currency() {
     assert_eq!(TRY::NAME, "Turkish lira");
     assert_eq!(TRY::NUMERIC, 949);
     assert_eq!(TRY::MINOR_UNIT, 2);
-    assert_eq!(TRY::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(TRY::MINOR_UNIT_SYMBOL, "kr");
     assert_eq!(TRY::THOUSAND_SEPARATOR, ".");
     assert_eq!(TRY::DECIMAL_SEPARATOR, ",");
 }
@@ -1747,7 +1747,7 @@ fn test_ttd_currency() {
     assert_eq!(TTD::NAME, "Trinidad and Tobago dollar");
     assert_eq!(TTD::NUMERIC, 780);
     assert_eq!(TTD::MINOR_UNIT, 2);
-    assert_eq!(TTD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(TTD::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(TTD::THOUSAND_SEPARATOR, ",");
     assert_eq!(TTD::DECIMAL_SEPARATOR, ".");
 }
@@ -1759,7 +1759,7 @@ fn test_twd_currency() {
     assert_eq!(TWD::NAME, "New Taiwan dollar");
     assert_eq!(TWD::NUMERIC, 901);
     assert_eq!(TWD::MINOR_UNIT, 2);
-    assert_eq!(TWD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(TWD::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(TWD::THOUSAND_SEPARATOR, ",");
     assert_eq!(TWD::DECIMAL_SEPARATOR, ".");
 }
@@ -1771,7 +1771,7 @@ fn test_tzs_currency() {
     assert_eq!(TZS::NAME, "Tanzanian shilling");
     assert_eq!(TZS::NUMERIC, 834);
     assert_eq!(TZS::MINOR_UNIT, 2);
-    assert_eq!(TZS::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(TZS::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(TZS::THOUSAND_SEPARATOR, ",");
     assert_eq!(TZS::DECIMAL_SEPARATOR, ".");
 }
@@ -1783,7 +1783,7 @@ fn test_uah_currency() {
     assert_eq!(UAH::NAME, "Ukrainian hryvnia");
     assert_eq!(UAH::NUMERIC, 980);
     assert_eq!(UAH::MINOR_UNIT, 2);
-    assert_eq!(UAH::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(UAH::MINOR_UNIT_SYMBOL, "коп.");
     assert_eq!(UAH::THOUSAND_SEPARATOR, " ");
     assert_eq!(UAH::DECIMAL_SEPARATOR, ",");
 }
@@ -1843,7 +1843,7 @@ fn test_uyu_currency() {
     assert_eq!(UYU::NAME, "Uruguayan peso");
     assert_eq!(UYU::NUMERIC, 858);
     assert_eq!(UYU::MINOR_UNIT, 2);
-    assert_eq!(UYU::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(UYU::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(UYU::THOUSAND_SEPARATOR, ".");
     assert_eq!(UYU::DECIMAL_SEPARATOR, ",");
 }
@@ -1867,7 +1867,7 @@ fn test_uzs_currency() {
     assert_eq!(UZS::NAME, "Uzbekistan som");
     assert_eq!(UZS::NUMERIC, 860);
     assert_eq!(UZS::MINOR_UNIT, 2);
-    assert_eq!(UZS::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(UZS::MINOR_UNIT_SYMBOL, "тийин");
     assert_eq!(UZS::THOUSAND_SEPARATOR, " ");
     assert_eq!(UZS::DECIMAL_SEPARATOR, ",");
 }
@@ -1879,7 +1879,7 @@ fn test_ved_currency() {
     assert_eq!(VED::NAME, "Venezuelan bolívar soberano");
     assert_eq!(VED::NUMERIC, 926);
     assert_eq!(VED::MINOR_UNIT, 2);
-    assert_eq!(VED::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(VED::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(VED::THOUSAND_SEPARATOR, ".");
     assert_eq!(VED::DECIMAL_SEPARATOR, ",");
 }
@@ -1891,7 +1891,7 @@ fn test_ves_currency() {
     assert_eq!(VES::NAME, "Venezuelan bolívar soberano");
     assert_eq!(VES::NUMERIC, 928);
     assert_eq!(VES::MINOR_UNIT, 2);
-    assert_eq!(VES::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(VES::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(VES::THOUSAND_SEPARATOR, ".");
     assert_eq!(VES::DECIMAL_SEPARATOR, ",");
 }
@@ -1927,7 +1927,7 @@ fn test_wst_currency() {
     assert_eq!(WST::NAME, "Samoan tala");
     assert_eq!(WST::NUMERIC, 882);
     assert_eq!(WST::MINOR_UNIT, 2);
-    assert_eq!(WST::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(WST::MINOR_UNIT_SYMBOL, "s");
     assert_eq!(WST::THOUSAND_SEPARATOR, ",");
     assert_eq!(WST::DECIMAL_SEPARATOR, ".");
 }
@@ -2023,7 +2023,7 @@ fn test_xcd_currency() {
     assert_eq!(XCD::NAME, "East Caribbean dollar");
     assert_eq!(XCD::NUMERIC, 951);
     assert_eq!(XCD::MINOR_UNIT, 2);
-    assert_eq!(XCD::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(XCD::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(XCD::THOUSAND_SEPARATOR, ",");
     assert_eq!(XCD::DECIMAL_SEPARATOR, ".");
 }
@@ -2035,7 +2035,7 @@ fn test_xcg_currency() {
     assert_eq!(XCG::NAME, "Caribean guilder");
     assert_eq!(XCG::NUMERIC, 532);
     assert_eq!(XCG::MINOR_UNIT, 2);
-    assert_eq!(XCG::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(XCG::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(XCG::THOUSAND_SEPARATOR, ".");
     assert_eq!(XCG::DECIMAL_SEPARATOR, ",");
 }
@@ -2155,7 +2155,7 @@ fn test_yer_currency() {
     assert_eq!(YER::NAME, "Yemeni rial");
     assert_eq!(YER::NUMERIC, 886);
     assert_eq!(YER::MINOR_UNIT, 2);
-    assert_eq!(YER::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(YER::MINOR_UNIT_SYMBOL, "فلس");
     assert_eq!(YER::THOUSAND_SEPARATOR, "٬");
     assert_eq!(YER::DECIMAL_SEPARATOR, "٫");
 }
@@ -2167,7 +2167,7 @@ fn test_zar_currency() {
     assert_eq!(ZAR::NAME, "South African rand");
     assert_eq!(ZAR::NUMERIC, 710);
     assert_eq!(ZAR::MINOR_UNIT, 2);
-    assert_eq!(ZAR::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(ZAR::MINOR_UNIT_SYMBOL, "c");
     assert_eq!(ZAR::THOUSAND_SEPARATOR, " ");
     assert_eq!(ZAR::DECIMAL_SEPARATOR, ",");
 }
@@ -2179,7 +2179,7 @@ fn test_zmw_currency() {
     assert_eq!(ZMW::NAME, "Zambian kwacha");
     assert_eq!(ZMW::NUMERIC, 967);
     assert_eq!(ZMW::MINOR_UNIT, 2);
-    assert_eq!(ZMW::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(ZMW::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(ZMW::THOUSAND_SEPARATOR, ",");
     assert_eq!(ZMW::DECIMAL_SEPARATOR, ".");
 }
@@ -2191,7 +2191,7 @@ fn test_zwg_currency() {
     assert_eq!(ZWG::NAME, "Zimbabwe Gold");
     assert_eq!(ZWG::NUMERIC, 924);
     assert_eq!(ZWG::MINOR_UNIT, 2);
-    assert_eq!(ZWG::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(ZWG::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(ZWG::THOUSAND_SEPARATOR, ",");
     assert_eq!(ZWG::DECIMAL_SEPARATOR, ".");
 }
@@ -2203,7 +2203,7 @@ fn test_zwl_currency() {
     assert_eq!(ZWL::NAME, "Zimbabwean dollar");
     assert_eq!(ZWL::NUMERIC, 932);
     assert_eq!(ZWL::MINOR_UNIT, 2);
-    assert_eq!(ZWL::MINOR_UNIT_SYMBOL, "minor");
+    assert_eq!(ZWL::MINOR_UNIT_SYMBOL, "¢");
     assert_eq!(ZWL::THOUSAND_SEPARATOR, ",");
     assert_eq!(ZWL::DECIMAL_SEPARATOR, ".");
 }
