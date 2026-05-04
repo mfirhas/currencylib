@@ -118,7 +118,9 @@ impl TryFrom<iso_currency::Currency> for IsoCurrency {
         let symbol = currency.symbol();
         let name = currency.name();
         let numeric = currency.numeric();
-        let minor_unit = currency.exponent().unwrap_or_default();
+        let minor_unit = currency
+            .exponent()
+            .ok_or("failed getting minor unit from iso_currency".into())?;
         let minor_unit_symbol = if let Some(ref minor_symbol) = symbol.subunit_symbol {
             minor_symbol
         } else if minor_unit == 0 {
