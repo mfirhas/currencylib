@@ -119,7 +119,7 @@ impl TryFrom<iso_currency::Currency> for IsoCurrency {
         let name = currency.name();
         let numeric = currency.numeric();
         let minor_unit = currency.exponent().unwrap_or_default();
-        let minor_unit_symbol: &str = data::CURRENCY_DATA
+        let minor_unit_symbol: &str = data::ISO_CURRENCY_DATA
             .get(code)
             .map(|d| d.minor_unit_symbol)
             .unwrap_or(DEFAULT_MINOR_UNIT_SYMBOL);
@@ -159,7 +159,7 @@ impl FromStr for Separator {
         use icu::locale::Locale;
         use icu_provider::prelude::*;
 
-        if let Some(data_entry) = data::CURRENCY_DATA.get(s) {
+        if let Some(data_entry) = data::ISO_CURRENCY_DATA.get(s) {
             let loc = data_entry
                 .locale
                 .parse::<Locale>()

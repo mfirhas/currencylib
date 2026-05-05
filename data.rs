@@ -7,8 +7,8 @@ pub(crate) struct Data {
     pub(crate) minor_unit_symbol: &'static str,
 }
 
-/// Combined currency data: origin, locale, and minor unit symbol.
-pub static CURRENCY_DATA: phf::Map<&'static str, Data> = phf_map! {
+/// ISO 4217 currencies data.
+pub static ISO_CURRENCY_DATA: phf::Map<&'static str, Data> = phf_map! {
     "AED" => Data { origin: "United Arab Emirates",   locale: "ar-AE", minor_unit_symbol: "فلس" },
     "AFN" => Data { origin: "Afghanistan",            locale: "fa-AF", minor_unit_symbol: "پول" },
     "ALL" => Data { origin: "Albania",                locale: "sq-AL", minor_unit_symbol: "q" },
