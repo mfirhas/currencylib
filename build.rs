@@ -18,7 +18,7 @@ const DEFAULT_MINOR_UNIT_SYMBOL: &str = "minor";
 const OUT_FILENAME: &str = "iso_currencies.rs";
 
 fn main() {
-    generate_iso().expect("failed generating iso currencies");
+    generate_iso().unwrap_or_else(|err| panic!("failed generating iso currencies: {}", err));
 }
 
 /// Generate `Currency` implementations for all ISO 4217 currencies
