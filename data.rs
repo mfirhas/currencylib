@@ -1,5 +1,6 @@
 use phf::phf_map;
 
+#[derive(Debug, Clone, Copy)]
 pub(crate) struct Data {
     pub(crate) origin: &'static str,
     pub(crate) locale: &'static str,
