@@ -21,11 +21,14 @@ use std::str::FromStr;
 assert_eq!(USD::CODE, "USD");
 assert_eq!(USD::SYMBOL, "$");
 assert_eq!(USD::NAME, "United States dollar");
+assert_eq!(USD::NUMERIC, 840_u16);
 assert_eq!(USD::MINOR_UNIT, 2);
 assert_eq!(USD::MINOR_UNIT_SYMBOL, "¢");
-assert_eq!(USD::NUMERIC, 840_u16);
+assert_eq!(USD::MINOR_UNIT_NAME, "cent");
 assert_eq!(USD::THOUSAND_SEPARATOR, ",");
 assert_eq!(USD::DECIMAL_SEPARATOR, ".");
+assert_eq!(USD::ORIGIN, "United States");
+assert_eq!(USD::LOCALE, "en-US");
 
 let usd = USD::from_str("USD").unwrap();
 assert_eq!(usd, USD);
