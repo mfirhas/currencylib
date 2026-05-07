@@ -8,7 +8,7 @@ use std::path::Path;
 mod data;
 
 /// Where build.rs will put build result.
-const OUT_FILENAME: &str = "iso_currencies.rs";
+const ISO_OUT_FILENAME: &str = "iso_currencies.rs";
 
 fn main() {
     generate_iso().unwrap_or_else(|err| panic!("failed generating iso currencies: {}", err));
@@ -17,7 +17,7 @@ fn main() {
 /// Generate `Currency` implementations for all ISO 4217 currencies
 fn generate_iso() -> Result<(), String> {
     let out_dir = env::var("OUT_DIR").map_err(|err| err.to_string())?;
-    let dest_path = Path::new(&out_dir).join(OUT_FILENAME);
+    let dest_path = Path::new(&out_dir).join(ISO_OUT_FILENAME);
     let mut f = File::create(&dest_path).map_err(|err| err.to_string())?;
 
     writeln!(f, "use crate::Currency;").map_err(|err| err.to_string())?;
