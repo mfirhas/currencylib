@@ -1,18 +1,11 @@
 #![forbid(clippy::unwrap_used)]
 
-use iso_currency::IntoEnumIterator;
 use std::env;
 use std::fs::File;
 use std::io::Write;
 use std::path::Path;
-use std::str::FromStr;
-use std::sync::LazyLock;
 
-#[path = "data.rs"]
 mod data;
-
-/// If a currency has no symbol gives it default.
-const DEFAULT_MINOR_UNIT_SYMBOL: &str = "minor";
 
 /// Where build.rs will put build result.
 const OUT_FILENAME: &str = "iso_currencies.rs";
@@ -31,8 +24,21 @@ fn generate_iso() -> Result<(), String> {
     writeln!(f, "use core::str::FromStr;").map_err(|err| err.to_string())?;
 
     // Generate for ALL ISO currencies
-    for currency in iso_currency::Currency::iter() {
-        let isocurrency: IsoCurrency = currency.try_into()?;
+    for code in data::ISO_CURRENCY_DATA.keys() {
+        let data::Data {
+            code,
+            symbol,
+            name,
+            numeric,
+            minor_unit,
+            minor_unit_symbol,
+            thousand_separator,
+            decimal_separator,
+            origin,
+            locale,
+        } = data::ISO_CURRENCY_DATA
+            .get(code)
+            .ok_or(format!("currency code {} not found", code))?;
 
         // Write struct and impl for each currency
         writeln!(
@@ -66,20 +72,20 @@ impl FromStr for {} {{
     }}
 }}
 ",
-            isocurrency.name,
-            isocurrency.code,
-            isocurrency.code,
-            isocurrency.code,
-            isocurrency.symbol,
-            isocurrency.name,
-            isocurrency.numeric,
-            isocurrency.minor_unit,
-            isocurrency.minor_unit_symbol,
-            isocurrency.separator.thousand_separator,
-            isocurrency.separator.decimal_separator,
-            isocurrency.code,
-            isocurrency.code,
-            isocurrency.code
+            name,
+            code,
+            code,
+            code,
+            symbol,
+            name,
+            numeric,
+            minor_unit,
+            minor_unit_symbol,
+            thousand_separator,
+            decimal_separator,
+            code,
+            code,
+            code
         )
         .map_err(|err| err.to_string())?;
     }
@@ -88,105 +94,3 @@ impl FromStr for {} {{
 
     Ok(())
 }
-
-/// Facade for iso currencies
-struct IsoCurrency {
-    pub code: String,
-    pub symbol: String,
-    pub name: String,
-    pub numeric: u16,
-    pub minor_unit: u16,
-    pub minor_unit_symbol: String,
-    pub separator: Separator,
-}
-
-impl IsoCurrency {
-    /// Override iso currency properties
-    pub(crate) fn r#override<F>(&mut self, func: F)
-    where
-        F: FnOnce(&mut Self),
-    {
-        func(self)
-    }
-}
-
-impl TryFrom<iso_currency::Currency> for IsoCurrency {
-    type Error = String;
-
-    fn try_from(currency: iso_currency::Currency) -> Result<Self, Self::Error> {
-        let code = currency.code();
-        let symbol = currency.symbol();
-        let name = currency.name();
-        let numeric = currency.numeric();
-        let minor_unit = currency.exponent().unwrap_or_default();
-        let minor_unit_symbol: &str = data::ISO_CURRENCY_DATA
-            .get(code)
-            .map(|d| d.minor_unit_symbol)
-            .unwrap_or(DEFAULT_MINOR_UNIT_SYMBOL);
-
-        let separator = code.parse::<Separator>()?;
-
-        let mut isocurrency = Self {
-            code: code.into(),
-            symbol: symbol.to_string(),
-            name: name.into(),
-            numeric,
-            minor_unit,
-            minor_unit_symbol: minor_unit_symbol.into(),
-            separator,
-        };
-
-        // overrides
-        for func in OVERRIDES.iter() {
-            isocurrency.r#override(func);
-        }
-
-        Ok(isocurrency)
-    }
-}
-
-struct Separator {
-    pub thousand_separator: String,
-    pub decimal_separator: String,
-}
-
-impl FromStr for Separator {
-    type Err = String;
-
-    /// Instantiate Separator from currency alpha code.
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        use icu::decimal::provider::{Baked, DecimalSymbolsV1};
-        use icu::locale::Locale;
-        use icu_provider::prelude::*;
-
-        if let Some(data_entry) = data::ISO_CURRENCY_DATA.get(s) {
-            let loc = data_entry
-                .locale
-                .parse::<Locale>()
-                .map_err(|err| err.to_string())?;
-
-            let data_locale: DataLocale = (&loc).into();
-            let id = DataIdentifierBorrowed::for_locale(&data_locale);
-
-            let resp: DataResponse<DecimalSymbolsV1> = Baked
-                .load(DataRequest {
-                    id,
-                    ..Default::default()
-                })
-                .map_err(|err| err.to_string())?;
-
-            let symbols = resp.payload.get();
-
-            Ok(Self {
-                thousand_separator: symbols.grouping_separator().into(),
-                decimal_separator: symbols.decimal_separator().into(),
-            })
-        } else {
-            Err(format!("Currency Code {} not found in ISO 4217", s))
-        }
-    }
-}
-
-/// List of iso currencies override functions.
-/// Each overrides should have comment on why it overrides.
-static OVERRIDES: LazyLock<Vec<fn(&mut IsoCurrency)>> = LazyLock::new(|| vec![]);
