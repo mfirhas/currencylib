@@ -32,6 +32,7 @@ fn generate_iso() -> Result<(), String> {
             numeric,
             minor_unit,
             minor_unit_symbol,
+            minor_unit_name,
             thousand_separator,
             decimal_separator,
             origin,
@@ -55,6 +56,7 @@ impl Currency for {} {{
     const NUMERIC: u16 = {};
     const MINOR_UNIT: u16 = {};
     const MINOR_UNIT_SYMBOL: &'static str = \"{}\";
+    const MINOR_UNIT_NAME: &'static str = \"{}\";
     const THOUSAND_SEPARATOR: &'static str = \"{}\";
     const DECIMAL_SEPARATOR: &'static str = \"{}\";
 }}
@@ -81,6 +83,7 @@ impl FromStr for {} {{
             numeric,
             minor_unit,
             minor_unit_symbol,
+            minor_unit_name,
             thousand_separator,
             decimal_separator,
             code,

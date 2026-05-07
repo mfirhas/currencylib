@@ -23,6 +23,9 @@ pub trait Currency {
     /// Currency minor symbol (e.g., USD -> "¢")
     const MINOR_UNIT_SYMBOL: &'static str;
 
+    /// Currency minor unit name (e.g., USD -> "cent")
+    const MINOR_UNIT_NAME: &'static str;
+
     /// thousand separator (e.g., USD -> ",")
     const THOUSAND_SEPARATOR: &'static str;
 
