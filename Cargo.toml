@@ -20,8 +20,5 @@ exclude = [
 [dependencies]
 
 [build-dependencies]
-iso_currency = { version = "0.5.3", features = ["iterator"] }
 phf = { version = "0.13", features = ["macros"] }
-icu = { version = "2.1.1", features = ["compiled_data"] }
-icu_provider = "2.1.1"
 
