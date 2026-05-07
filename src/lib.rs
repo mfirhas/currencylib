@@ -31,6 +31,12 @@ pub trait Currency {
 
     /// decimal separator (e.g., USD -> ".")
     const DECIMAL_SEPARATOR: &'static str;
+
+    /// Country or region of origin (e.g., USD -> "United States")
+    const ORIGIN: &'static str;
+
+    /// BCP 47 locale tag (e.g., USD -> "en-US")
+    const LOCALE: &'static str;
 }
 
 mod iso_currencies;

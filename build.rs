@@ -59,6 +59,8 @@ impl Currency for {} {{
     const MINOR_UNIT_NAME: &'static str = \"{}\";
     const THOUSAND_SEPARATOR: &'static str = \"{}\";
     const DECIMAL_SEPARATOR: &'static str = \"{}\";
+    const ORIGIN: &'static str = \"{}\";
+    const LOCALE: &'static str = \"{}\";
 }}
 
 impl FromStr for {} {{
@@ -86,6 +88,8 @@ impl FromStr for {} {{
             minor_unit_name,
             thousand_separator,
             decimal_separator,
+            origin,
+            locale,
             code,
             code,
             code

@@ -2207,3 +2207,39 @@ fn test_zwl_currency() {
     assert_eq!(ZWL::THOUSAND_SEPARATOR, ",");
     assert_eq!(ZWL::DECIMAL_SEPARATOR, ".");
 }
+
+#[test]
+fn test_minor_unit_name() {
+    assert_eq!(USD::MINOR_UNIT_NAME, "cent");
+    assert_eq!(EUR::MINOR_UNIT_NAME, "cent");
+    assert_eq!(GBP::MINOR_UNIT_NAME, "penny");
+    assert_eq!(JPY::MINOR_UNIT_NAME, "");
+    assert_eq!(BHD::MINOR_UNIT_NAME, "fils");
+    assert_eq!(AED::MINOR_UNIT_NAME, "fils");
+    assert_eq!(AFN::MINOR_UNIT_NAME, "pul");
+    assert_eq!(ALL::MINOR_UNIT_NAME, "qindarkë");
+}
+
+#[test]
+fn test_origin() {
+    assert_eq!(USD::ORIGIN, "United States");
+    assert_eq!(EUR::ORIGIN, "Eurozone");
+    assert_eq!(GBP::ORIGIN, "United Kingdom");
+    assert_eq!(JPY::ORIGIN, "Japan");
+    assert_eq!(AED::ORIGIN, "United Arab Emirates");
+    assert_eq!(AFN::ORIGIN, "Afghanistan");
+    assert_eq!(ALL::ORIGIN, "Albania");
+    assert_eq!(BRL::ORIGIN, "Brazil");
+}
+
+#[test]
+fn test_locale() {
+    assert_eq!(USD::LOCALE, "en-US");
+    assert_eq!(EUR::LOCALE, "de-DE");
+    assert_eq!(GBP::LOCALE, "en-GB");
+    assert_eq!(JPY::LOCALE, "ja-JP");
+    assert_eq!(AED::LOCALE, "ar-AE");
+    assert_eq!(AFN::LOCALE, "fa-AF");
+    assert_eq!(ALL::LOCALE, "sq-AL");
+    assert_eq!(BRL::LOCALE, "pt-BR");
+}
