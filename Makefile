@@ -29,6 +29,14 @@ branch:
 	@mkdir -p $(OUT_DIR)
 	@cargo +nightly llvm-cov test --all-features --ignore-filename-regex "_test\.rs$$" --output-dir $(OUT_DIR) --open --branch
 
+regen:
+	@echo "Re-generate build..."
+	@echo "Running clean---------------------------------------------------"
+	@cargo clean
+	@sleep 1
+	@echo "Running build---------------------------------------------------"
+	@cargo build
+
 all:
 	@echo "Running all checks..."
 	@echo "Running cargo check---------------------------------------------"
@@ -42,9 +50,6 @@ all:
 	@sleep 1
 	@echo "Running doc"
 	@cargo doc --all-features
-	@sleep 1
-	@echo "Running clean---------------------------------------------------"
-	@cargo clean
 	@sleep 1
 	@echo "Running tests---------------------------------------------------"
 	@cargo test --all-features
