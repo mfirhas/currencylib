@@ -20,11 +20,11 @@ pub trait Currency {
     /// Number of decimal places/minor units (e.g., USD -> cents -> minor unit = 2)
     const MINOR_UNIT: u16;
 
-    /// Currency minor unit name (e.g., USD -> "cent")
-    const MINOR_UNIT_NAME: &'static str;
-
     /// Currency minor symbol (e.g., USD -> "¢")
     const MINOR_UNIT_SYMBOL: &'static str;
+
+    /// Currency minor unit name (e.g., USD -> "cent")
+    const MINOR_UNIT_NAME: &'static str;
 
     /// thousand separator (e.g., USD -> ",")
     const THOUSAND_SEPARATOR: &'static str;
