@@ -14,6 +14,9 @@ test:
 lcov:
 	@echo "Generating lcov.info..."
 	@mkdir -p $(OUT_DIR)
+	@sleep 1
+	@cargo clean
+	@sleep 1
 	@cargo llvm-cov test --all-features --ignore-filename-regex "_test\.rs$$" --output-path $(OUT_FILE) --lcov
 
 html:
