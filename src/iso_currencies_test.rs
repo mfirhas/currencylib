@@ -2753,4 +2753,3 @@ fn test_zwl_currency() {
     assert_eq!(ZWL::ORIGIN, "Zimbabwe");
     assert_eq!(ZWL::LOCALE, "en-ZW");
 }
-
