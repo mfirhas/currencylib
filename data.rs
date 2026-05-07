@@ -2,17 +2,17 @@ use phf::phf_map;
 
 #[derive(Debug, Clone, Copy)]
 pub struct Data {
-    pub code:               &'static str,
-    pub symbol:             &'static str,
-    pub name:               &'static str,
-    pub numeric:            &'static str,
-    pub minor_unit:         &'static str,
-    pub minor_unit_symbol:  &'static str,
-    pub minor_unit_name:    &'static str,
+    pub code: &'static str,
+    pub symbol: &'static str,
+    pub name: &'static str,
+    pub numeric: &'static str,
+    pub minor_unit: &'static str,
+    pub minor_unit_symbol: &'static str,
+    pub minor_unit_name: &'static str,
     pub thousand_separator: &'static str,
-    pub decimal_separator:  &'static str,
-    pub origin:             &'static str,
-    pub locale:             &'static str,
+    pub decimal_separator: &'static str,
+    pub origin: &'static str,
+    pub locale: &'static str,
 }
 
 /// ISO 4217 currencies data.
