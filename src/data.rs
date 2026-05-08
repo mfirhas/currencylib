@@ -15,7 +15,7 @@ pub struct Data {
     pub locale: &'static str,
 }
 
-/// Get currency [`Data`] by ISO 4217 alphabetical code.
+/// Get currency data by code.
 pub fn get(code: &str) -> Option<Data> {
     ISO_CURRENCY_DATA.get(code).copied()
 }
