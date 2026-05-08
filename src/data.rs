@@ -16,6 +16,7 @@ pub struct Data {
 }
 
 /// Get currency data by code.
+#[allow(unused)]
 pub fn get(code: &str) -> Option<Data> {
     ISO_CURRENCY_DATA.get(code).copied()
 }
