@@ -1,7 +1,7 @@
 use phf::phf_map;
 
 /// Currency data.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, Eq)]
 pub struct Data {
     pub code: &'static str,
     pub symbol: &'static str,
@@ -14,6 +14,12 @@ pub struct Data {
     pub decimal_separator: &'static str,
     pub origin: &'static str,
     pub locale: &'static str,
+}
+
+impl PartialEq for Data {
+    fn eq(&self, other: &Self) -> bool {
+        self.code == other.code
+    }
 }
 
 /// Get a currency's data by code.
