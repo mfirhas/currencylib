@@ -42,5 +42,11 @@ pub trait Currency {
 mod iso_currencies;
 pub use iso_currencies::*;
 
+#[cfg(feature = "data")]
+pub mod data;
+
 #[cfg(test)]
 mod iso_currencies_test;
+
+#[cfg(all(test, feature = "data"))]
+mod data_test;

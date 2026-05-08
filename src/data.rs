@@ -200,3 +200,8 @@ pub static ISO_CURRENCY_DATA: phf::Map<&'static str, Data> = phf_map! {
     "ZWG" => Data { code: "ZWG", symbol: "¤"     , name: "Zimbabwe Gold"                                , numeric: "924", minor_unit: "2", minor_unit_symbol: "¢"    , minor_unit_name: "cent", thousand_separator: ",", decimal_separator: ".", origin: "Zimbabwe"              , locale: "en-ZW" },
     "ZWL" => Data { code: "ZWL", symbol: "¤"     , name: "Zimbabwean dollar"                            , numeric: "932", minor_unit: "2", minor_unit_symbol: "¢"    , minor_unit_name: "cent", thousand_separator: ",", decimal_separator: ".", origin: "Zimbabwe"              , locale: "en-ZW" },
 };
+
+/// Get currency [`Data`] by ISO 4217 alphabetical code.
+pub fn get(code: &str) -> Option<Data> {
+    ISO_CURRENCY_DATA.get(code).copied()
+}

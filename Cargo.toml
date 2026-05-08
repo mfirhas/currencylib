@@ -17,7 +17,11 @@ exclude = [
   "AGENTS.md",
 ]
 
+[features]
+data = ["dep:phf"]
+
 [dependencies]
+phf = { version = "0.13", features = ["macros"], optional = true }
 
 [build-dependencies]
 phf = { version = "0.13", features = ["macros"] }

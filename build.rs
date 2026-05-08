@@ -5,6 +5,7 @@ use std::fs::File;
 use std::io::Write;
 use std::path::Path;
 
+#[path = "src/data.rs"]
 mod data;
 
 /// Where build.rs will put build result.
