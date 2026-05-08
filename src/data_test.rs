@@ -6,8 +6,8 @@ fn test_get_known_currency() {
     assert_eq!(usd.code, "USD");
     assert_eq!(usd.symbol, "$");
     assert_eq!(usd.name, "United States dollar");
-    assert_eq!(usd.numeric, "840");
-    assert_eq!(usd.minor_unit, "2");
+    assert_eq!(usd.numeric, 840);
+    assert_eq!(usd.minor_unit, 2);
     assert_eq!(usd.minor_unit_symbol, "¢");
     assert_eq!(usd.minor_unit_name, "cent");
     assert_eq!(usd.thousand_separator, ",");
@@ -22,8 +22,8 @@ fn test_get_eur_currency() {
     assert_eq!(eur.code, "EUR");
     assert_eq!(eur.symbol, "€");
     assert_eq!(eur.name, "Euro");
-    assert_eq!(eur.numeric, "978");
-    assert_eq!(eur.minor_unit, "2");
+    assert_eq!(eur.numeric, 978);
+    assert_eq!(eur.minor_unit, 2);
     assert_eq!(eur.minor_unit_symbol, "c");
     assert_eq!(eur.minor_unit_name, "cent");
     assert_eq!(eur.origin, "Eurozone");
