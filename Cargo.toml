@@ -17,6 +17,9 @@ exclude = [
   "AGENTS.md",
 ]
 
+[package.metadata.docs.rs]
+all-features = true
+
 [features]
 data = ["dep:phf"]
 

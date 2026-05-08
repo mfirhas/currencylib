@@ -1,5 +1,6 @@
 use phf::phf_map;
 
+/// Currency data.
 #[derive(Debug, Clone, Copy)]
 pub struct Data {
     pub code: &'static str,
@@ -15,7 +16,7 @@ pub struct Data {
     pub locale: &'static str,
 }
 
-/// Get currency data by code.
+/// Get a currency's data by code.
 #[allow(unused)]
 pub fn get(code: &str) -> Option<Data> {
     ISO_CURRENCY_DATA.get(code).copied()
