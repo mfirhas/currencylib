@@ -25,7 +25,7 @@ fn generate_iso() -> Result<(), String> {
     writeln!(f, "use core::str::FromStr;").map_err(|err| err.to_string())?;
 
     // Collect sorted codes for deterministic output
-    let mut codes: Vec<&&str> = data::ISO_CURRENCY_DATA.keys().collect();
+    let mut codes: Vec<&str> = data::ISO_CURRENCY_DATA.keys().copied().collect();
     codes.sort();
 
     // Generate for ALL ISO currencies

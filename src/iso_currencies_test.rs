@@ -13,9 +13,12 @@ fn test_iso_currency_from_str() {
     assert_eq!(IsoCurrency::from_str("  USD  ").unwrap(), IsoCurrency::USD);
 
     // Unknown / wrong-case codes return an error
-    assert!(IsoCurrency::from_str("usd").is_err());
-    assert!(IsoCurrency::from_str("UNKNOWN").is_err());
-    assert!(IsoCurrency::from_str("").is_err());
+    assert_eq!(IsoCurrency::from_str("usd"), Err("unknown currency code"));
+    assert_eq!(
+        IsoCurrency::from_str("UNKNOWN"),
+        Err("unknown currency code")
+    );
+    assert_eq!(IsoCurrency::from_str(""), Err("unknown currency code"));
 }
 
 #[test]
