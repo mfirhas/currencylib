@@ -28,6 +28,12 @@ pub fn get(code: &str) -> Option<Data> {
     ISO_CURRENCY_DATA.get(code).copied()
 }
 
+/// Contain all currencies supported.
+#[allow(unused)]
+pub fn entries() -> impl Iterator<Item = (&'static str, Data)> {
+    ISO_CURRENCY_DATA.entries().map(|(&k, &v)| (k, v))
+}
+
 /// ISO 4217 currencies data.
 pub(crate) static ISO_CURRENCY_DATA: phf::Map<&'static str, Data> = phf_map! {
     "AED" => Data { code: "AED", symbol: "د.إ"   , name: "United Arab Emirates dirham"                  , numeric: 784, minor_unit: 2, minor_unit_symbol: "فلس"  , minor_unit_name: "fils", thousand_separator: ",", decimal_separator: ".", origin: "United Arab Emirates"  , locale: "ar-AE" },
