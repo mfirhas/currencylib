@@ -2,6 +2,30 @@ use crate::*;
 use core::str::FromStr;
 
 #[test]
+fn test_iso_currency_from_str() {
+    // Known codes parse to the correct variant
+    assert_eq!(IsoCurrency::from_str("USD").unwrap(), IsoCurrency::USD);
+    assert_eq!(IsoCurrency::from_str("EUR").unwrap(), IsoCurrency::EUR);
+    assert_eq!(IsoCurrency::from_str("JPY").unwrap(), IsoCurrency::JPY);
+    assert_eq!(IsoCurrency::from_str("IDR").unwrap(), IsoCurrency::IDR);
+
+    // Whitespace is trimmed
+    assert_eq!(IsoCurrency::from_str("  USD  ").unwrap(), IsoCurrency::USD);
+
+    // Unknown / wrong-case codes return an error
+    assert!(IsoCurrency::from_str("usd").is_err());
+    assert!(IsoCurrency::from_str("UNKNOWN").is_err());
+    assert!(IsoCurrency::from_str("").is_err());
+}
+
+#[test]
+fn test_iso_currency_parse_syntax() {
+    // Also reachable via the standard `.parse()` method
+    let c: IsoCurrency = "EUR".parse().unwrap();
+    assert_eq!(c, IsoCurrency::EUR);
+}
+
+#[test]
 fn test_derives() {
     assert_eq!(USD, USD);
     assert_eq!(EUR, EUR);
