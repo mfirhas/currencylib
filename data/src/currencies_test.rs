@@ -1,8 +1,8 @@
-use crate::data;
+use crate::currencies;
 
 #[test]
 fn test_get_known_currency() {
-    let usd = data::get("USD").expect("USD should be found");
+    let usd = currencies::get("USD").expect("USD should be found");
     assert_eq!(usd.code, "USD");
     assert_eq!(usd.symbol, "$");
     assert_eq!(usd.name, "United States dollar");
@@ -18,7 +18,7 @@ fn test_get_known_currency() {
 
 #[test]
 fn test_get_eur_currency() {
-    let eur = data::get("EUR").expect("EUR should be found");
+    let eur = currencies::get("EUR").expect("EUR should be found");
     assert_eq!(eur.code, "EUR");
     assert_eq!(eur.symbol, "€");
     assert_eq!(eur.name, "Euro");
@@ -32,22 +32,22 @@ fn test_get_eur_currency() {
 
 #[test]
 fn test_get_unknown_currency() {
-    assert!(data::get("XYZ").is_none());
-    assert!(data::get("").is_none());
-    assert!(data::get("usd").is_none());
+    assert!(currencies::get("XYZ").is_none());
+    assert!(currencies::get("").is_none());
+    assert!(currencies::get("usd").is_none());
 }
 
 #[test]
 fn test_get_returns_copy() {
-    let d1 = data::get("JPY").expect("JPY should be found");
-    let d2 = data::get("JPY").expect("JPY should be found");
+    let d1 = currencies::get("JPY").expect("JPY should be found");
+    let d2 = currencies::get("JPY").expect("JPY should be found");
     assert_eq!(d1.code, d2.code);
     assert_eq!(d1.numeric, d2.numeric);
 }
 
 #[test]
 fn test_iso_currency_data_map() {
-    let aed = data::ISO_CURRENCY_DATA
+    let aed = currencies::ISO_CURRENCY_DATA
         .get("AED")
         .expect("AED should be in map");
     assert_eq!(aed.code, "AED");

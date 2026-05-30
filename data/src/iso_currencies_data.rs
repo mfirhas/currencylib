@@ -1,38 +1,9 @@
+//! Contains all currencies data definitions.
+//!
+//!
+
+use crate::currencies::Data;
 use phf::phf_map;
-
-/// Currency data.
-#[derive(Debug, Clone, Copy, Eq)]
-pub struct Data {
-    pub code: &'static str,
-    pub symbol: &'static str,
-    pub name: &'static str,
-    pub numeric: u16,
-    pub minor_unit: u16,
-    pub minor_unit_symbol: &'static str,
-    pub minor_unit_name: &'static str,
-    pub thousand_separator: &'static str,
-    pub decimal_separator: &'static str,
-    pub origin: &'static str,
-    pub locale: &'static str,
-}
-
-impl PartialEq for Data {
-    fn eq(&self, other: &Self) -> bool {
-        self.code == other.code
-    }
-}
-
-/// Get a currency's data by code.
-#[allow(unused)]
-pub fn get(code: &str) -> Option<Data> {
-    ISO_CURRENCY_DATA.get(code).copied()
-}
-
-/// Contain all currencies supported.
-#[allow(unused)]
-pub fn entries() -> impl Iterator<Item = (&'static str, Data)> {
-    ISO_CURRENCY_DATA.entries().map(|(&k, &v)| (k, v))
-}
 
 /// ISO 4217 currencies data.
 pub(crate) static ISO_CURRENCY_DATA: phf::Map<&'static str, Data> = phf_map! {

@@ -1,12 +1,10 @@
 #![forbid(clippy::unwrap_used)]
 
+use ::data::currencies;
 use std::env;
 use std::fs::File;
 use std::io::Write;
 use std::path::Path;
-
-#[path = "src/data.rs"]
-mod data;
 
 /// Where build.rs will put build result.
 const ISO_OUT_FILENAME: &str = "iso_currencies.rs";
@@ -25,23 +23,7 @@ fn generate_iso() -> Result<(), String> {
     writeln!(f, "use core::str::FromStr;").map_err(|err| err.to_string())?;
 
     // Generate for ALL ISO currencies
-    for code in data::ISO_CURRENCY_DATA.keys() {
-        let data::Data {
-            code,
-            symbol,
-            name,
-            numeric,
-            minor_unit,
-            minor_unit_symbol,
-            minor_unit_name,
-            thousand_separator,
-            decimal_separator,
-            origin,
-            locale,
-        } = data::ISO_CURRENCY_DATA
-            .get(code)
-            .ok_or(format!("currency code {} not found", code))?;
-
+    for (_, data) in currencies::entries() {
         // Write struct and impl for each currency
         writeln!(
             f,
@@ -77,23 +59,23 @@ impl FromStr for {} {{
     }}
 }}
 ",
-            name,
-            code,
-            code,
-            code,
-            symbol,
-            name,
-            numeric,
-            minor_unit,
-            minor_unit_symbol,
-            minor_unit_name,
-            thousand_separator,
-            decimal_separator,
-            origin,
-            locale,
-            code,
-            code,
-            code
+            data.name,
+            data.code,
+            data.code,
+            data.code,
+            data.symbol,
+            data.name,
+            data.numeric,
+            data.minor_unit,
+            data.minor_unit_symbol,
+            data.minor_unit_name,
+            data.thousand_separator,
+            data.decimal_separator,
+            data.origin,
+            data.locale,
+            data.code,
+            data.code,
+            data.code
         )
         .map_err(|err| err.to_string())?;
     }
