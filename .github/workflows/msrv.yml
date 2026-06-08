@@ -40,7 +40,7 @@ jobs:
       - name: Install cargo-msrv
         run: which cargo-msrv || cargo install cargo-msrv
 
-      - name: Run cargo msrv
+      - name: Verify MSRV
         uses: actions-rs/cargo@v1
         with:
           command: msrv
