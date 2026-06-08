@@ -13,7 +13,10 @@ rust-version = "1.85.1"
 exclude = [
   "**/*_test.rs",
   "tests/**",
+  "benches/**",
   "examples/**",
+  ".github/**",
+  ".gitignore",
   "Makefile",
   "AGENTS.md",
 ]
