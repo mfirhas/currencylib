@@ -9,6 +9,7 @@ repository = "https://github.com/mfirhas/currencylib"
 documentation = "https://docs.rs/currencylib"
 keywords = ["finance", "currency", "money", "type-safe", "no-std"]
 categories = ["finance", "data-structures"]
+rust-version = "1.85.1"
 exclude = [
   "**/*_test.rs",
   "tests/**",
