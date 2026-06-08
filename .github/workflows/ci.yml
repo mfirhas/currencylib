@@ -1,7 +1,7 @@
 name: ci
 
 env:
-  RUST_VERSION: 1.91.1
+  RUST_VERSION: 1.95.0
 
 on:
   pull_request:
@@ -128,7 +128,7 @@ jobs:
           path: target/coverage
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v7
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./target/coverage/lcov.info
