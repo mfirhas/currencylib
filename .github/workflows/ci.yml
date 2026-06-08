@@ -39,7 +39,7 @@ jobs:
             ~/.cargo/bin
             ~/.rustup
             target
-          key: ${{ runner.os }}-ci-cache-check-${{ hashFiles('**/Cargo.lock') }}
+          key: ${{ runner.os }}-ci-cache-check-${{ env.RUST_VERSION }}-${{ hashFiles('**/Cargo.lock') }}
 
       - name: Install stable toolchain
         uses: actions-rs/toolchain@v1
@@ -87,7 +87,7 @@ jobs:
             ~/.cargo/git
             ~/.cargo/bin
             target
-          key: ${{ runner.os }}-ci-cache-test-${{ hashFiles('**/Cargo.lock') }}
+          key: ${{ runner.os }}-ci-cache-test-${{ env.RUST_VERSION }}-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: |
             ${{ runner.os }}-ci-cache-
 
