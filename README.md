@@ -2,6 +2,7 @@
 
 ![Rust](https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white)
 [![Crates.io](https://img.shields.io/crates/v/currencylib.svg)](https://crates.io/crates/currencylib)
+[![ci](https://github.com/mfirhas/currencylib/actions/workflows/ci.yml/badge.svg)](https://github.com/mfirhas/currencylib/actions/workflows/ci.yml)
 [![Documentation](https://docs.rs/currencylib/badge.svg)](https://docs.rs/currencylib)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/mfirhas/currencylib/blob/master/LICENSE)
 
