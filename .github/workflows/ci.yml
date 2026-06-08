@@ -10,7 +10,7 @@ on:
   workflow_dispatch: {}
 
 concurrency:
-  group: currencylib-ci
+  group: ${{ github.repository }}-ci
   cancel-in-progress: false
 
 jobs:
