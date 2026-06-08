@@ -1,6 +1,6 @@
 # currencylib
 
-![Rust](https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white)
+[![MSRV](https://img.shields.io/crates/msrv/currencylib)](https://crates.io/crates/currencylib)
 [![Crates.io](https://img.shields.io/crates/v/currencylib.svg)](https://crates.io/crates/currencylib)
 [![ci](https://github.com/mfirhas/currencylib/actions/workflows/ci.yml/badge.svg)](https://github.com/mfirhas/currencylib/actions/workflows/ci.yml)
 [![Documentation](https://docs.rs/currencylib/badge.svg)](https://docs.rs/currencylib)
