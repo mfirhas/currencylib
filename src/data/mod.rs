@@ -1,8 +1,10 @@
-#![no_std]
 #![forbid(unsafe_code)]
 #![forbid(clippy::unwrap_used)]
 
-pub mod currencies;
+mod currencies;
+#[allow(unused)]
+pub use currencies::{Data, entries, get};
+
 mod iso_currencies_data;
 
 #[cfg(test)]

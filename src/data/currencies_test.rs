@@ -1,4 +1,29 @@
-use crate::currencies;
+use super::currencies;
+use super::iso_currencies_data::ISO_CURRENCY_DATA;
+
+#[test]
+fn currencies_entries_num_verify() {
+    // NOTE: adjust this after updating currencies data.
+    const EXPECTED_COUNT: i32 = 182;
+
+    let mut count = 0;
+    for (key, data) in currencies::entries() {
+        assert_eq!(key, data.code);
+        count += 1;
+    }
+    assert_eq!(count, EXPECTED_COUNT);
+}
+
+#[test]
+fn test_comparison() {
+    let usd = currencies::get("USD").unwrap();
+    assert_eq!(usd, usd);
+    let sgd = currencies::get("SGD").unwrap();
+    assert_ne!(usd, sgd);
+    assert!(usd > sgd);
+    let a = sgd.cmp(&usd);
+    assert!(a.is_lt());
+}
 
 #[test]
 fn test_get_known_currency() {
@@ -47,9 +72,7 @@ fn test_get_returns_copy() {
 
 #[test]
 fn test_iso_currency_data_map() {
-    let aed = currencies::ISO_CURRENCY_DATA
-        .get("AED")
-        .expect("AED should be in map");
+    let aed = ISO_CURRENCY_DATA.get("AED").expect("AED should be in map");
     assert_eq!(aed.code, "AED");
     assert_eq!(aed.origin, "United Arab Emirates");
 }

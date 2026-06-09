@@ -25,11 +25,10 @@ exclude = [
 all-features = true
 
 [features]
-data = ["dep:data"]
+data = ["dep:phf"]
 
 [dependencies]
-data = { path = "data", optional = true }
+phf = { version = "0.13", default-features = false, features = ["macros"], optional = true }
 
 [build-dependencies]
-data = { path = "data" }
-
+phf = { version = "0.13", default-features = false, features = ["macros"] }

@@ -2,11 +2,11 @@
 //!
 //!
 
-use crate::currencies::Data;
+use super::currencies::Data;
 use phf::phf_map;
 
 /// ISO 4217 currencies data.
-pub(crate) static ISO_CURRENCY_DATA: phf::Map<&'static str, Data> = phf_map! {
+pub(super) static ISO_CURRENCY_DATA: phf::Map<&'static str, Data> = phf_map! {
     "AED" => Data { code: "AED", symbol: "د.إ"   , name: "United Arab Emirates dirham"                  , numeric: 784, minor_unit: 2, minor_unit_symbol: "فلس"  , minor_unit_name: "fils", thousand_separator: ",", decimal_separator: ".", origin: "United Arab Emirates"  , locale: "ar-AE" },
     "AFN" => Data { code: "AFN", symbol: "؋"     , name: "Afghan afghani"                               , numeric: 971, minor_unit: 2, minor_unit_symbol: "پول"  , minor_unit_name: "pul", thousand_separator: "٬", decimal_separator: "٫", origin: "Afghanistan"           , locale: "fa-AF" },
     "ALL" => Data { code: "ALL", symbol: "L"     , name: "Albanian lek"                                 , numeric: 8  , minor_unit: 2, minor_unit_symbol: "q"    , minor_unit_name: "qindarkë", thousand_separator: " ", decimal_separator: ",", origin: "Albania"               , locale: "sq-AL" },

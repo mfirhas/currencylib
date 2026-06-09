@@ -43,9 +43,7 @@ mod iso_currencies;
 pub use iso_currencies::*;
 
 #[cfg(feature = "data")]
-pub mod data {
-    pub use data::currencies::{Data, entries, get};
-}
+pub mod data;
 
 #[cfg(test)]
 mod iso_currencies_test;

@@ -2,11 +2,11 @@
 //!
 //!
 
-use crate::iso_currencies_data::ISO_CURRENCY_DATA;
+use super::iso_currencies_data::ISO_CURRENCY_DATA;
 
 /// Currency data.
 ///
-/// `code` is the identity of a currency and used for equality.
+/// `code` is the identity of a currency and used for equality & ordering.
 #[derive(Debug, Clone, Copy, Eq)]
 pub struct Data {
     pub code: &'static str,
@@ -25,6 +25,18 @@ pub struct Data {
 impl PartialEq for Data {
     fn eq(&self, other: &Self) -> bool {
         self.code == other.code
+    }
+}
+
+impl PartialOrd for Data {
+    fn partial_cmp(&self, other: &Self) -> Option<core::cmp::Ordering> {
+        Some(self.cmp(other))
+    }
+}
+
+impl Ord for Data {
+    fn cmp(&self, other: &Self) -> core::cmp::Ordering {
+        self.code.cmp(other.code)
     }
 }
 

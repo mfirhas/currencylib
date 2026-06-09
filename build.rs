@@ -1,6 +1,8 @@
 #![forbid(clippy::unwrap_used)]
 
-use ::data::currencies;
+#[path = "src/data/mod.rs"]
+mod data;
+
 use std::env;
 use std::fs::File;
 use std::io::Write;
@@ -23,7 +25,7 @@ fn generate_iso() -> Result<(), String> {
     writeln!(f, "use core::str::FromStr;").map_err(|err| err.to_string())?;
 
     // Generate for ALL ISO currencies
-    for (_, data) in currencies::entries() {
+    for (_, data) in data::entries() {
         // Write struct and impl for each currency
         writeln!(
             f,
