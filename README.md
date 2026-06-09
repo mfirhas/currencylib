@@ -16,6 +16,8 @@ No std and no unsafe code.
 ## Usage
 The crate contains 2 main component the trait(`Currency`) and the types implementing it from ISO 4217 standard.
 
+Currencies are compared lexicographically by their code.
+
 ```rust
 use currencylib::{Currency, USD /* ...and other iso 4217 currencies you want use, e.g. EUR, CAD, etc*/};
 use std::str::FromStr;

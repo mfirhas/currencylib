@@ -7,6 +7,8 @@ use super::iso_currencies_data::ISO_CURRENCY_DATA;
 /// Currency data.
 ///
 /// `code` is the identity of a currency and used for equality & ordering.
+///
+/// Ordering is lexicographic.
 #[derive(Debug, Clone, Copy, Eq)]
 pub struct Data {
     pub code: &'static str,
