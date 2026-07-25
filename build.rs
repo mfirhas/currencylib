@@ -23,6 +23,11 @@ fn generate_iso() -> Result<(), String> {
 
     writeln!(f, "use crate::Currency;").map_err(|err| err.to_string())?;
     writeln!(f, "use core::str::FromStr;").map_err(|err| err.to_string())?;
+    writeln!(
+        f,
+        "const ERR_INVALID_CODE: &str = \"invalid currency code\";"
+    )
+    .map_err(|err| err.to_string())?;
 
     // Generate for ALL ISO currencies
     for (_, data) in data::entries() {
@@ -54,7 +59,7 @@ impl FromStr for {} {{
     fn from_str(s: &str) -> Result<Self, Self::Err> {{
         let s = s.trim();
         if s != {}::CODE {{
-            return Err(\"invalid currency code\");
+            return Err(ERR_INVALID_CODE);
         }}
 
         Ok({})
